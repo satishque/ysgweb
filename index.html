@@ -58,9 +58,9 @@
     --radius:16px;
   }
   *{box-sizing:border-box;}
-  html{scroll-behavior:auto;overflow-anchor:none;}
+  html{scroll-behavior:auto;overflow-anchor:none;overflow-x:hidden;max-width:100%;}
   section[id]{scroll-margin-top:78px;}
-  body{margin:0;background:var(--bg);overflow-anchor:none;}
+  body{margin:0;background:var(--bg);overflow-anchor:none;overflow-x:hidden;max-width:100%;}
   input::placeholder,textarea::placeholder{color:var(--fg-dim);}
   select:focus,input:focus,textarea:focus{border-color:var(--accent)!important;}
   a{text-decoration:none;color:inherit;}
@@ -86,11 +86,12 @@
     .ysg-navbar{padding:0 18px !important;}
     #ysg-name-grid{grid-template-columns:1fr !important;}
     div[style*="max-width:1200px"]{padding-left:18px !important;padding-right:18px !important;}
+    footer div[style*="justify-content:space-between"]{flex-direction:column;gap:28px !important;}
   }
 </style>
 </helmet>
 
-<div ref="{{ setRoot }}" data-theme="{{ theme }}" data-screen-label="YSG Landing Page" style="min-height:100vh;background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;">
+<div ref="{{ setRoot }}" data-theme="{{ theme }}" data-screen-label="YSG Landing Page" style="min-height:100vh;background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100%;">
 
   <nav style="position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);">
     <input type="checkbox" id="ysg-nav-toggle" style="display:none;">
@@ -141,7 +142,7 @@
 
   <!-- HERO -->
   <section id="top" style="position:relative;overflow:hidden;background:linear-gradient(180deg,var(--hero-tint),transparent 70%);">
-    <div style="position:absolute;top:-180px;right:-120px;width:560px;height:560px;background:radial-gradient(circle,var(--accent-soft),transparent 68%);pointer-events:none;"></div>
+    <div style="position:absolute;top:-180px;right:-120px;width:560px;height:560px;max-width:100%;background:radial-gradient(circle,var(--accent-soft),transparent 68%);pointer-events:none;"></div>
     <div style="max-width:1200px;margin:0 auto;padding:30px 32px 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:48px;align-items:center;position:relative;">
       <div>
         <h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,3.7vw,45px);font-weight:600;line-height:1.05;letter-spacing:-.03em;margin:0 0 16px;color:var(--fg);">
@@ -303,7 +304,7 @@
           </div>
           <div style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:18px 16px;display:flex;align-items:center;gap:13px;">
             <span style="width:42px;height:42px;border-radius:11px;background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3.5 7l8.5 6 8.5-6"></path></svg></span>
-            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-dim);margin-bottom:4px;">Email Address</div><a href="/cdn-cgi/l/email-protection#2a4945445e4b495e6a53455f58595f5a5a45585e4d4f44434f04494547" style="font-size:15px;color:var(--fg);font-weight:500;text-decoration:none;" style-hover="color:var(--accent)"><span class="__cf_email__" data-cfemail="7714181903161403370e180205040207071805031012191e125914181a">[email&#160;protected]</span></a></div>
+            <div><div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-dim);margin-bottom:4px;">Email Address</div><a href="mailto:contact@yoursupportgenie.com" style="font-size:15px;color:var(--fg);font-weight:500;text-decoration:none;" style-hover="color:var(--accent)">contact@yoursupportgenie.com</a></div>
           </div>
           <div style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:18px 16px;display:flex;align-items:center;gap:13px;">
             <span style="width:42px;height:42px;border-radius:11px;background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg></span>
@@ -330,7 +331,7 @@
         <span style="font-size:13px;color:var(--fg);font-weight:600;line-height:1.25;">© {{ year }} YSG IT Service (OPC) Pvt. Ltd <span style="font-size:12.5px;color:var(--fg-dim);font-weight:400;">(www.yoursupportgenie.com)</span></span>
         <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">(Registered under the Companies Act, 2013)</span>
         <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">Registered Office: Bangalore - 560043, Karnataka, India</span>
-        <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">Contact:&nbsp; Phone: <a href="tel:+916302840055" style="color:inherit;text-decoration:none;" style-hover="color:var(--accent)">+91 630 284 0055</a>&nbsp; |&nbsp; Email: <a href="/cdn-cgi/l/email-protection#61020e0f1500021521180e1413121411110e131506040f08044f020e0c" style="color:inherit;text-decoration:none;" style-hover="color:var(--accent)"><span class="__cf_email__" data-cfemail="680b07061c090b1c2811071d1a1b1d1818071a1c0f0d06010d460b0705">[email&#160;protected]</span></a></span>
+        <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">Contact:&nbsp; Phone: <a href="tel:+916302840055" style="color:inherit;text-decoration:none;" style-hover="color:var(--accent)">+91 630 284 0055</a>&nbsp; |&nbsp; Email: <a href="mailto:contact@yoursupportgenie.com" style="color:inherit;text-decoration:none;" style-hover="color:var(--accent)">contact@yoursupportgenie.com</a></span>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <a href="/" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;transition:color .15s;" style-hover="color:var(--fg)">Home</a>
@@ -412,7 +413,7 @@
 
 </div>
 </x-dc>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;cornerStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;rounded&quot;,&quot;sharp&quot;],&quot;default&quot;:&quot;rounded&quot;,&quot;tsType&quot;:&quot;'rounded' | 'sharp'&quot;}}">
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;cornerStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;rounded&quot;,&quot;sharp&quot;],&quot;default&quot;:&quot;rounded&quot;,&quot;tsType&quot;:&quot;'rounded' | 'sharp'&quot;}}">
 class Component extends DCLogic {
   state = { theme: null, sent: false, sending: false, sendError: null, justSent: false, sendErrorMsg: null, cookieOpen: false, docOpen: null, prefs: { functional: true, analytics: false, marketing: false } };
 
