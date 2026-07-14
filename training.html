@@ -57,12 +57,11 @@
   p{font-weight:400;}
   ::selection{background:var(--accent);color:#fff;}
   .ysg-navbar{position:relative;}
-  #ysg-nav-toggle{display:none;}
   #ysg-nav-toggle-label{display:none;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--border);border-radius:8px;cursor:pointer;flex-shrink:0;color:var(--fg-muted);}
   @media (max-width:880px){
     #ysg-desktop-links{display:none !important;}
     #ysg-nav-toggle-label{display:flex;}
-    #ysg-nav-toggle:checked ~ .ysg-navbar #ysg-desktop-links{display:flex !important;flex-direction:column;align-items:stretch;gap:4px;position:absolute;top:64px;right:18px;left:auto;width:180px;background:#fff;padding:8px;border-radius:12px;border:1px solid var(--border);box-shadow:0 18px 40px -12px rgba(0,0,0,.28);z-index:49;}
+    .ysg-navbar.ysg-nav-open #ysg-desktop-links{display:flex !important;flex-direction:column;align-items:stretch;gap:4px;position:absolute;top:64px;right:18px;left:auto;width:180px;background:#fff;padding:8px;border-radius:12px;border:1px solid var(--border);box-shadow:0 18px 40px -12px rgba(0,0,0,.28);z-index:49;}
     #ysg-desktop-links a{white-space:normal !important;padding:8px 10px;width:100%;border-radius:8px;font-size:14px;}
     #ysg-desktop-links a:hover{background:#f3f4f6;}
   }
@@ -77,8 +76,7 @@
 <div data-screen-label="YSG Training Page" style="min-height:100vh;background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;">
 
   <nav style="position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);">
-    <input type="checkbox" id="ysg-nav-toggle" style="display:none;">
-    <div class="ysg-navbar" style="max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+    <div class="ysg-navbar {{ navOpenClass }}" style="max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
       <a href="/" style="display:flex;align-items:center;gap:12px;">
         <svg width="74" height="80" viewBox="0 0 50 54" style="display:block;overflow:visible;">
           <defs>
@@ -116,7 +114,7 @@
       </div>
       <div style="display:flex;align-items:center;gap:12px;">
         <a href="/#contact" style="display:inline-flex;align-items:center;background:var(--accent);color:#fff;font-size:14.5px;font-weight:600;padding:10px 20px;border-radius:10px;transition:filter .15s,transform .15s;" style-hover="filter:brightness(1.08);transform:translateY(-1px)">Contact</a>
-        <label for="ysg-nav-toggle" id="ysg-nav-toggle-label" aria-label="Menu"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"></line><line x1="0" y1="7" x2="18" y2="7"></line><line x1="0" y1="13" x2="18" y2="13"></line></svg></label>
+        <label id="ysg-nav-toggle-label" aria-label="Menu" onClick="{{ toggleNav }}"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"></line><line x1="0" y1="7" x2="18" y2="7"></line><line x1="0" y1="13" x2="18" y2="13"></line></svg></label>
       </div>
     </div>
   </nav>
@@ -258,20 +256,20 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
 class Component extends DCLogic {
-  state = { docOpen: null, cookieOpen: false, prefs: { functional: true, analytics: false, marketing: false } };
+  state = { docOpen: null, cookieOpen: false, navOpen: false, prefs: { functional: true, analytics: false, marketing: false } };
 
   componentDidMount(){
     document.addEventListener('keydown', this.handleKeydown);
     document.addEventListener('click', this.handleOutsideNavClick);
   }
   handleOutsideNavClick = (e) => {
-    const toggle = document.getElementById('ysg-nav-toggle');
-    if(!toggle || !toggle.checked) return;
+    if(!this.state.navOpen) return;
     const navbar = document.querySelector('.ysg-navbar');
     if(navbar && !navbar.contains(e.target)){
-      toggle.checked = false;
+      this.setState({ navOpen: false });
     }
   }
+  toggleNav = () => this.setState(s => ({ navOpen: !s.navOpen }));
   componentWillUnmount(){
     document.removeEventListener('keydown', this.handleKeydown);
   }
@@ -379,6 +377,8 @@ class Component extends DCLogic {
   renderVals(){
     const doc = this.docData()[this.state.docOpen] || {};
     return {
+      navOpenClass: this.state.navOpen ? 'ysg-nav-open' : '',
+      toggleNav: this.toggleNav,
       docOpen: !!this.state.docOpen,
       closeDoc: this.closeDoc,
       docTitle: doc.title || '',
