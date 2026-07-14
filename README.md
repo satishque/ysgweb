@@ -1,2 +1,0 @@
-# ysgweb
-YSG IT Services
