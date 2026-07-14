@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="uploads/favicon-16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="uploads/favicon-32.png">
 <link rel="apple-touch-icon" href="uploads/YSG-logo-180.png">
-<meta name="description" content="News & insights from YSG IT Service — updates on managed IT, security, and cloud.">
+<meta name="description" content="News & insights from YSG IT Services — updates on managed IT, security, and cloud.">
 <meta property="og:site_name" content="Your Support Genie">
 <meta property="og:image" content="https://www.yoursupportgenie.com/uploads/og-image.png">
 <meta property="og:url" content="https://www.yoursupportgenie.com/news.html">
@@ -18,7 +18,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Your Support Genie",
-  "alternateName": "YSG IT Service (OPC) Pvt. Ltd",
+  "alternateName": "YSG IT Services (OPC) Pvt. Ltd",
   "url": "https://www.yoursupportgenie.com/",
   "logo": "https://www.yoursupportgenie.com/uploads/YSG-logo-180.png",
   "email": "contact@yoursupportgenie.com",
@@ -63,8 +63,9 @@
   @media (max-width:880px){
     #ysg-desktop-links{display:none !important;}
     #ysg-nav-toggle-label{display:flex;}
-    #ysg-nav-toggle:checked ~ .ysg-navbar #ysg-desktop-links{display:flex !important;flex-direction:column;align-items:flex-start;gap:2px;position:absolute;top:72px;left:0;right:0;background:var(--nav-bg);padding:10px 24px 18px;border-bottom:1px solid var(--border);box-shadow:0 18px 40px -20px rgba(0,0,0,.25);z-index:49;}
-    #ysg-desktop-links a{white-space:normal !important;padding:10px 0;width:100%;}
+    #ysg-nav-toggle:checked ~ .ysg-navbar #ysg-desktop-links{display:flex !important;flex-direction:column;align-items:stretch;gap:4px;position:absolute;top:64px;right:18px;left:auto;width:180px;background:#fff;padding:8px;border-radius:12px;border:1px solid var(--border);box-shadow:0 18px 40px -12px rgba(0,0,0,.28);z-index:49;}
+    #ysg-desktop-links a{white-space:normal !important;padding:8px 10px;width:100%;border-radius:8px;font-size:14px;}
+    #ysg-desktop-links a:hover{background:#f3f4f6;}
   }
   @media (max-width:520px){
     .ysg-navbar{padding:0 18px !important;}
@@ -163,7 +164,7 @@
   <footer style="border-top:1px solid var(--border);">
     <div style="max-width:1200px;margin:0 auto;padding:28px 32px;display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;">
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <span style="font-size:13px;color:var(--fg);font-weight:600;line-height:1.25;">© 2026 YSG IT Service (OPC) Pvt. Ltd <span style="font-size:12.5px;color:var(--fg-dim);font-weight:400;">(www.yoursupportgenie.com)</span></span>
+        <span style="font-size:13px;color:var(--fg);font-weight:600;line-height:1.25;">© 2026 YSG IT Services (OPC) Pvt. Ltd <span style="font-size:12.5px;color:var(--fg-dim);font-weight:400;">(www.yoursupportgenie.com)</span></span>
         <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">(Registered under the Companies Act, 2013)</span>
         <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">Registered Office: Bangalore - 560043, Karnataka, India</span>
         <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">Contact:&nbsp; Phone: <a href="tel:+916302840055" style="color:inherit;" style-hover="color:var(--accent)">+91 630 284 0055</a>&nbsp; |&nbsp; Email: <a href="mailto:contact@yoursupportgenie.com" style="color:inherit;" style-hover="color:var(--accent)">contact@yoursupportgenie.com</a></span>
@@ -257,6 +258,15 @@ class Component extends DCLogic {
 
   componentDidMount(){
     document.addEventListener('keydown', this.handleKeydown);
+    document.addEventListener('click', this.handleOutsideNavClick);
+  }
+  handleOutsideNavClick = (e) => {
+    const toggle = document.getElementById('ysg-nav-toggle');
+    if(!toggle || !toggle.checked) return;
+    const navbar = document.querySelector('.ysg-navbar');
+    if(navbar && !navbar.contains(e.target)){
+      toggle.checked = false;
+    }
   }
   componentWillUnmount(){
     document.removeEventListener('keydown', this.handleKeydown);
@@ -284,7 +294,7 @@ class Component extends DCLogic {
     return {
       tos: {
         title: 'Terms of Service', meta: 'Last updated: June 2026',
-        intro: 'These Terms of Service govern your access to and use of the website, managed IT services, and support provided by YSG IT Service (OPC) Pvt. Ltd ("YSG", "we", "us"). By engaging our services you agree to these terms.',
+        intro: 'These Terms of Service govern your access to and use of the website, managed IT services, and support provided by YSG IT Services (OPC) Pvt. Ltd ("YSG", "we", "us"). By engaging our services you agree to these terms.',
         sections: [
           { heading: '1. Scope of Services', text: 'YSG provides managed IT services including service desk support, cloud administration, cybersecurity, network management, data analytics, automation, SaaS support, and database administration, as described in your signed Service Agreement or Statement of Work.' },
           { heading: '2. Service Levels', text: 'Response and resolution targets are defined in your applicable Service Level Agreement. Targets are measured during agreed business hours (IST) unless 24/7 coverage is contracted.' },
@@ -296,7 +306,7 @@ class Component extends DCLogic {
       },
       privacy: {
         title: 'Privacy Policy', meta: 'Last updated: June 2026',
-        intro: 'This Privacy Policy explains how YSG IT Service (OPC) Pvt. Ltd collects, uses, and protects personal information when you use our website or services, in line with India\u2019s Digital Personal Data Protection Act, 2023 and applicable global standards.',
+        intro: 'This Privacy Policy explains how YSG IT Services (OPC) Pvt. Ltd collects, uses, and protects personal information when you use our website or services, in line with India\u2019s Digital Personal Data Protection Act, 2023 and applicable global standards.',
         sections: [
           { heading: 'Information We Collect', text: 'We collect contact details you submit (name, business, email, phone, message), information needed to deliver managed services, and standard technical data such as IP address and browser type.' },
           { heading: 'How We Use It', text: 'To respond to enquiries, deliver and support our services, meet legal obligations, secure our systems, and \u2014 with your consent \u2014 send relevant updates.' },
@@ -371,7 +381,7 @@ class Component extends DCLogic {
       docMeta: doc.meta || '',
       docIntro: doc.intro || '',
       docSections: doc.sections || [],
-      docNote: 'This document is provided for general information about YSG IT Service (OPC) Pvt. Ltd and should be reviewed alongside your signed agreement. For questions, contact contact@yoursupportgenie.com.',
+      docNote: 'This document is provided for general information about YSG IT Services (OPC) Pvt. Ltd and should be reviewed alongside your signed agreement. For questions, contact contact@yoursupportgenie.com.',
       always: true,
       cookieOpen: this.state.cookieOpen,
       openCookie: this.openCookie,
