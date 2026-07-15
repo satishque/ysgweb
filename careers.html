@@ -11,6 +11,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="uploads/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="uploads/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="uploads/favicon-16.png">
 <script src="components/image-slot.js"></script>
 <style>
   :root{
@@ -44,6 +47,13 @@
   @media (max-width:640px){
     .ysg-stack-row{flex-direction:column;}
     .ysg-stack-col{width:100% !important;}
+  }
+  @media (max-width:640px){
+    .ysg-navbar > div:last-child{gap:6px !important;}
+    #ysg-lang-select{font-size:12px;padding:4px 12px 4px 2px;}
+    .ysg-navbar > div:last-child svg{width:13px;height:13px;}
+    .ysg-navbar a[href="#contact"], .ysg-navbar a[href*="#contact"]{padding:8px 12px !important;font-size:13px !important;}
+    #ysg-nav-toggle-label{width:34px;height:34px;}
   }
   @media (max-width:520px){
     .ysg-navbar{padding:0 18px !important;}
