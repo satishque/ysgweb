@@ -38,9 +38,10 @@
   #ysg-lang-select::-moz-focus-inner{border:0;}
   @media (max-width:1040px){
     #ysg-desktop-links{display:none !important;}
-    #ysg-nav-toggle-label{display:flex;}
-    .ysg-navbar.ysg-nav-open #ysg-desktop-links{display:flex !important;flex-direction:column;align-items:stretch;gap:4px;position:absolute;top:64px;right:18px;left:auto;width:180px;background:#fff;padding:8px;border-radius:12px;border:1px solid var(--border);box-shadow:0 18px 40px -12px rgba(0,0,0,.28);z-index:59;}
-    #ysg-desktop-links a{white-space:normal !important;padding:8px 10px;width:100%;border-radius:8px;font-size:14px;}
+    #ysg-nav-toggle-label{display:flex;position:absolute;top:50%;right:32px;transform:translateY(-50%);z-index:60;}
+    .ysg-navbar > div:last-child{padding-right:50px;}
+    .ysg-navbar.ysg-nav-open #ysg-desktop-links{display:flex !important;flex-direction:column;align-items:stretch;gap:3px;position:absolute;top:60px;right:18px;left:auto;width:150px;background:#fff;padding:6px;border-radius:10px;border:1px solid var(--border);box-shadow:0 18px 40px -12px rgba(0,0,0,.28);z-index:59;}
+    #ysg-desktop-links a{white-space:normal !important;padding:7px 8px;width:100%;border-radius:7px;font-size:13px;}
     #ysg-desktop-links a:hover{background:#f3f4f6;}
   }
   .ysg-stack-row{}
@@ -53,12 +54,16 @@
     #ysg-lang-select{font-size:12px;padding:4px 12px 4px 2px;}
     .ysg-navbar > div:last-child svg{width:13px;height:13px;}
     .ysg-navbar a[href="#contact"], .ysg-navbar a[href*="#contact"]{padding:8px 12px !important;font-size:13px !important;}
-    #ysg-nav-toggle-label{width:34px;height:34px;}
+    #ysg-nav-toggle-label{width:34px;height:34px;right:18px;}
+    .ysg-navbar > div:last-child{padding-right:40px;}
   }
   @media (max-width:520px){
     .ysg-navbar{padding:0 18px !important;}
     div[style*="max-width:1200px"]{padding-left:18px !important;padding-right:18px !important;}
-    footer div[style*="justify-content:space-between"]{flex-direction:column;gap:28px !important;}
+    .ysg-about-grid{grid-template-columns:1fr !important;}
+    footer div[style*="justify-content:space-between"]{flex-direction:column;align-items:center !important;gap:28px !important;text-align:center;}
+    footer div[style*="align-items:flex-start"]{align-items:center !important;}
+    footer > div > div:first-child{align-items:center !important;}
   }
 </style>
 </helmet>
