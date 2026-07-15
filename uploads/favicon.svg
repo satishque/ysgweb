@@ -6,15 +6,6 @@
       <stop offset="1" stop-color="#1d3a6e"></stop>
     </linearGradient>
   </defs>
-  <rect width="32" height="32" rx="6" fill="#ffffff"></rect>
-  <g stroke="#0b0e1a" stroke-width="0.9" stroke-linecap="round" fill="none">
-    <line x1="16" y1="2" x2="16" y2="4.3"></line>
-    <line x1="0.8" y1="16" x2="3.3" y2="16"></line>
-    <line x1="28.7" y1="16" x2="31.2" y2="16"></line>
-    <line x1="10.5" y1="27.8" x2="10.5" y2="30.3"></line>
-    <line x1="21.5" y1="27.8" x2="21.5" y2="30.3"></line>
-  </g>
-  <circle cx="16" cy="1.2" r="0.9" fill="#0b0e1a"></circle>
-  <rect x="3.5" y="4.3" width="25" height="23.6" rx="2.5" fill="url(#g)"></rect>
-  <text x="16" y="19.6" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="12.5" fill="#ffffff" letter-spacing="-0.3">YSG</text>
+  <rect width="32" height="32" rx="6" fill="url(#g)"></rect>
+  <text x="16" y="21" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="13.5" fill="#ffffff" letter-spacing="-0.4">YSG</text>
 </svg>
