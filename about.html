@@ -2,17 +2,17 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>News - Your Support Genie (YSG)</title>
+<title>About YSG - Your Support Genie</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="uploads/favicon.svg">
 <link rel="icon" type="image/png" sizes="16x16" href="uploads/favicon-16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="uploads/favicon-32.png">
 <link rel="apple-touch-icon" href="uploads/YSG-logo-180.png">
-<meta name="description" content="News & insights from YSG IT Services — updates on managed IT, security, and cloud.">
+<meta name="description" content="About YSG IT Services (OPC) Pvt. Ltd — our story, mission, and the team behind dependable managed IT services for start-ups, micro, and small businesses.">
 <meta property="og:site_name" content="Your Support Genie">
 <meta property="og:image" content="https://www.yoursupportgenie.com/uploads/og-image.png">
-<meta property="og:url" content="https://www.yoursupportgenie.com/news.html">
-<link rel="canonical" href="https://www.yoursupportgenie.com/news.html">
+<meta property="og:url" content="https://www.yoursupportgenie.com/about.html">
+<link rel="canonical" href="https://www.yoursupportgenie.com/about.html">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -57,6 +57,7 @@
   a{text-decoration:none;color:inherit;}
   p{font-weight:400;}
   ::selection{background:var(--accent);color:#fff;}
+  @keyframes ysgCardJiggle{0%{transform:translateY(0) rotate(0deg);}25%{transform:translateY(-6px) rotate(-1deg);}50%{transform:translateY(-7px) rotate(1deg);}75%{transform:translateY(-6px) rotate(-0.5deg);}100%{transform:translateY(-6px) rotate(0deg);}}
   .ysg-navbar{position:relative;}
   #ysg-nav-toggle-label{display:none;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--border);border-radius:8px;cursor:pointer;flex-shrink:0;color:var(--fg-muted);}
   @media (max-width:880px){
@@ -66,6 +67,11 @@
     #ysg-desktop-links a{white-space:normal !important;padding:8px 10px;width:100%;border-radius:8px;font-size:14px;}
     #ysg-desktop-links a:hover{background:#f3f4f6;}
   }
+  .ysg-stack-row{}
+  @media (max-width:640px){
+    .ysg-stack-row{flex-direction:column;}
+    .ysg-stack-col{width:100% !important;}
+  }
   @media (max-width:520px){
     .ysg-navbar{padding:0 18px !important;}
     div[style*="max-width:1200px"]{padding-left:18px !important;padding-right:18px !important;}
@@ -74,7 +80,7 @@
 </style>
 </helmet>
 
-<div data-screen-label="YSG News Page" style="min-height:100vh;background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;">
+<div data-screen-label="YSG About Page" style="min-height:100vh;background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;">
 
   <nav style="position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);">
     <div class="ysg-navbar {{ navOpenClass }}" style="max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
@@ -111,8 +117,8 @@
         <a href="/#services" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">Services &amp; Support</a>
         <a href="training.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">Training</a>
         <a href="careers.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">Careers</a>
-        <a href="news.html" style="font-size:15.5px;font-weight:600;color:var(--fg);white-space:nowrap;">News</a>
-        <a href="about.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">About</a>
+        <a href="news.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">News</a>
+        <a href="about.html" style="font-size:15.5px;font-weight:600;color:var(--fg);white-space:nowrap;">About</a>
       </div>
       <div style="display:flex;align-items:center;gap:12px;">
         <a href="/#contact" style="display:inline-flex;align-items:center;background:var(--accent);color:#fff;font-size:14.5px;font-weight:600;padding:10px 20px;border-radius:10px;transition:filter .15s,transform .15s;" style-hover="filter:brightness(1.08);transform:translateY(-1px)">Contact</a>
@@ -121,40 +127,18 @@
     </div>
   </nav>
 
-  <!-- NEWS -->
-  <section style="max-width:1200px;margin:0 auto;padding:36px 32px 21px;">
-    <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:24px;">
-      <h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3.4vw,38px);font-weight:600;letter-spacing:-.025em;line-height:1.05;margin:0;color:var(--fg);">News &amp; Insights</h1>
-      <span style="width:1px;align-self:stretch;background:var(--border-2);"></span>
-      <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0;max-width:480px;">Updates from YSG and practical guidance on managed IT, security, and the cloud.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;">
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s,box-shadow .2s;" style-hover="border-color:var(--accent-line);transform:translateY(-3px);box-shadow:var(--shadow)">
-        <div style="aspect-ratio:16/9;overflow:hidden;"><image-slot id="ysg-news-1" shape="rect" src="uploads/c-insight.png" placeholder="Drop article image" style="width:100%;height:100%;display:block;"></image-slot></div>
-        <div style="padding:14px;display:flex;flex-direction:column;gap:6px;flex:1;">
-          <div style="display:flex;align-items:center;gap:10px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">External · CRN</span><span style="font-size:11.5px;color:var(--fg-dim);">2026</span></div>
-          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin:0;color:var(--fg);">“The 10 Coolest MSP Tools of 2026 (So Far)”</h3>
-          <p style="font-size:13px;line-height:1.5;color:var(--fg-muted);margin:0;flex:1;">CRN rounds up the tools standing out across the managed services industry this year.</p>
-          <a href="https://www.crn.com/news/managed-services/2026/the-10-coolest-msp-tools-of-2026-so-far" target="_blank" rel="nofollow noopener noreferrer" style="font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px;margin-top:2px;">Read on CRN <span style="font-size:15px;">→</span></a>
+  <!-- ABOUT -->
+  <section style="padding:44px 0 48px;">
+    <div style="max-width:1200px;margin:0 auto 24px;padding:0 32px;width:100%;box-sizing:border-box;"><h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,3.6vw,42px);font-weight:600;letter-spacing:-.025em;line-height:1.05;margin:0;color:var(--fg);">About YSG</h1></div>
+    <div class="ysg-about-grid" style="max-width:1200px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:36px;align-items:center;">
+      <div style="position:relative;">
+        <div style="aspect-ratio:1.47;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow);">
+          <image-slot id="ysg-about" shape="rect" src="uploads/cc_brwn.png" placeholder="Founder portrait: plain photo, no text/graphics overlay, warm natural lighting, working or looking at camera, 3:2 landscape" style="width:100%;height:100%;display:block;"></image-slot>
         </div>
       </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s,box-shadow .2s;" style-hover="border-color:var(--accent-line);transform:translateY(-3px);box-shadow:var(--shadow)">
-        <div style="aspect-ratio:16/9;overflow:hidden;"><image-slot id="ysg-news-2" shape="rect" src="uploads/c-headset.png" placeholder="Drop article image" style="width:100%;height:100%;display:block;"></image-slot></div>
-        <div style="padding:14px;display:flex;flex-direction:column;gap:6px;flex:1;">
-          <div style="display:flex;align-items:center;gap:10px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">External · Automation Anywhere</span><span style="font-size:11.5px;color:var(--fg-dim);">May 2026</span></div>
-          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin:0;color:var(--fg);">“Automation Anywhere Fulfills More Than One Billion IT Service Requests”</h3>
-          <p style="font-size:13px;line-height:1.5;color:var(--fg-muted);margin:0;flex:1;">A milestone announcement on AI-driven IT service desk automation at enterprise scale.</p>
-          <a href="https://www.automationanywhere.com/company/press-room/automation-anywhere-fulfills-more-one-billion-it-service-requests-announces-2026" target="_blank" rel="nofollow noopener noreferrer" style="font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px;margin-top:2px;">Read the press release <span style="font-size:15px;">→</span></a>
-        </div>
-      </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s,box-shadow .2s;" style-hover="border-color:var(--accent-line);transform:translateY(-3px);box-shadow:var(--shadow)">
-        <div style="aspect-ratio:16/9;overflow:hidden;"><image-slot id="ysg-news-3" shape="rect" src="uploads/c- ai.png" placeholder="Drop article image" style="width:100%;height:100%;display:block;"></image-slot></div>
-        <div style="padding:14px;display:flex;flex-direction:column;gap:6px;flex:1;">
-          <div style="display:flex;align-items:center;gap:10px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">External · The Economic Times</span><span style="font-size:11.5px;color:var(--fg-dim);">2026</span></div>
-          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin:0;color:var(--fg);">“Tech's Brutal Layoffs Continue, and India Alone Is Losing Up to 35,000 Jobs”</h3>
-          <p style="font-size:13px;line-height:1.5;color:var(--fg-muted);margin:0;flex:1;">A look at the ongoing wave of technology job cuts and what's driving it in 2026.</p>
-          <a href="https://economictimes.indiatimes.com/news/company/corporate-trends/techs-brutal-layoffs-continue-and-india-alone-losing-up-to-35000-jobs/articleshow/132282955.cms" target="_blank" rel="nofollow noopener noreferrer" style="font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px;margin-top:2px;">Read on Economic Times <span style="font-size:15px;">→</span></a>
-        </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;">
+        <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0 0 14px;">Your Support Genie (YSG) was founded to help start-ups, micro, and small businesses address the technology challenges that come with growth by delivering dependable IT, cybersecurity, and cloud services tailored to their needs. Our goal is to become a trusted technology partner that keeps systems secure, reliable, and efficient, allowing business owners to focus on running and growing their business with confidence. Our vision is to make quality IT accessible to every business, regardless of size, delivered through responsive support, practical solutions, and clear, honest advice.</p>
+        <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0;">YSG is built on an entrepreneur's drive and years of hands-on technical support experience gained by solving real business challenges. That experience shapes our approach—practical, accountable, and focused on building long-term relationships through dependable service, proactive guidance, and technology solutions that grow alongside our clients and partners. We also partner with established MSPs to extend capacity and deliver successful outcomes for shared clients.</p>
       </div>
     </div>
   </section>
