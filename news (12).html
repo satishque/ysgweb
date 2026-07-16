@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
+<script>try{localStorage.setItem('ysgLang','pt');}catch(e){}</script>
 <meta charset="utf-8">
-<title>News - Your Support Genie (YSG)</title>
+<title>Sobre a YSG - Your Support Genie</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="News and insights on managed IT, cybersecurity, and cloud from Your Support Genie (YSG).">
-<link rel="canonical" href="https://www.yoursupportgenie.com/news.html">
-<link rel="alternate" hreflang="en" href="https://www.yoursupportgenie.com/news.html">
-<link rel="alternate" hreflang="es" href="https://www.yoursupportgenie.com/es/news.html">
-<link rel="alternate" hreflang="de" href="https://www.yoursupportgenie.com/de/news.html">
-<link rel="alternate" hreflang="pt" href="https://www.yoursupportgenie.com/pt/news.html">
-<link rel="alternate" hreflang="x-default" href="https://www.yoursupportgenie.com/news.html">
+<meta name="description" content="Sobre a Your Support Genie (YSG) — um fornecedor ágil de serviços de TI geridos para startups e pequenas empresas.">
+<link rel="canonical" href="https://www.yoursupportgenie.com/pt/about.html">
+<link rel="alternate" hreflang="en" href="https://www.yoursupportgenie.com/about.html">
+<link rel="alternate" hreflang="es" href="https://www.yoursupportgenie.com/es/about.html">
+<link rel="alternate" hreflang="de" href="https://www.yoursupportgenie.com/de/about.html">
+<link rel="alternate" hreflang="pt" href="https://www.yoursupportgenie.com/pt/about.html">
+<link rel="alternate" hreflang="x-default" href="https://www.yoursupportgenie.com/about.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="News - Your Support Genie (YSG)">
-<meta property="og:description" content="News and insights on managed IT, cybersecurity, and cloud from Your Support Genie (YSG).">
-<meta property="og:url" content="https://www.yoursupportgenie.com/news.html">
+<meta property="og:title" content="Sobre a YSG - Your Support Genie">
+<meta property="og:description" content="Sobre a Your Support Genie (YSG) — um fornecedor ágil de serviços de TI geridos para startups e pequenas empresas.">
+<meta property="og:url" content="https://www.yoursupportgenie.com/pt/about.html">
 <meta property="og:image" content="https://www.yoursupportgenie.com/uploads/favicon-32.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="News - Your Support Genie (YSG)">
-<meta name="twitter:description" content="News and insights on managed IT from Your Support Genie (YSG).">
+<meta name="twitter:title" content="Sobre a YSG - Your Support Genie">
+<meta name="twitter:description" content="About Your Support Genie (YSG), managed IT services for start-ups and small businesses.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Your Support Genie (YSG)","url":"https://www.yoursupportgenie.com/","logo":"https://www.yoursupportgenie.com/uploads/favicon-32.png"}</script>
-<script src="./support.js"></script>
+<script src="../support.js"></script>
 </head>
 <body>
 <x-dc>
@@ -28,10 +29,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="uploads/favicon.svg?v=2">
-<link rel="icon" type="image/png" sizes="32x32" href="uploads/favicon-32.png?v=2">
-<link rel="icon" type="image/png" sizes="16x16" href="uploads/favicon-16.png?v=2">
-<script src="components/image-slot.js"></script>
+<link rel="icon" type="image/svg+xml" href="../uploads/favicon.svg?v=2">
+<link rel="icon" type="image/png" sizes="32x32" href="../uploads/favicon-32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="../uploads/favicon-16.png?v=2">
+<script src="../components/image-slot.js"></script>
 <style>
   :root{
     --bg:#ffffff; --surface:#ffffff; --surface-2:#eef1f6;
@@ -48,6 +49,7 @@
   a{text-decoration:none;color:inherit;}
   p{font-weight:400;}
   ::selection{background:var(--accent);color:#fff;}
+  @keyframes ysgCardJiggle{0%{transform:translateY(0) rotate(0deg);}25%{transform:translateY(-6px) rotate(-1deg);}50%{transform:translateY(-7px) rotate(1deg);}75%{transform:translateY(-6px) rotate(-0.5deg);}100%{transform:translateY(-6px) rotate(0deg);}}
   .ysg-navbar{position:relative;}
   #ysg-nav-toggle-label{display:none;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid var(--border);border-radius:8px;cursor:pointer;flex-shrink:0;color:var(--fg-muted);}
   #ysg-lang-select{appearance:none;-webkit-appearance:none;-moz-appearance:none;background:transparent;border:none;outline:none;box-shadow:none;padding:4px 14px 4px 2px;font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:var(--fg-muted);cursor:pointer;transition:color .15s;}
@@ -62,6 +64,11 @@
     #ysg-desktop-links a:hover{background:#f3f4f6;}
     .ysg-logo-mark{width:62px;height:67px;}
   }
+  .ysg-stack-row{}
+  @media (max-width:640px){
+    .ysg-stack-row{flex-direction:column;}
+    .ysg-stack-col{width:100% !important;}
+  }
   @media (max-width:640px){
     .ysg-navbar > div:last-child{gap:6px !important;}
     #ysg-lang-select{font-size:12px;padding:4px 12px 4px 2px;}
@@ -75,12 +82,13 @@
   @media (max-width:520px){
     .ysg-navbar{padding:0 18px !important;}
     div[style*="max-width:1200px"]{padding-left:18px !important;padding-right:18px !important;}
+    .ysg-about-grid{grid-template-columns:1fr !important;}
     footer div[style*="justify-content:space-between"]{flex-direction:column;align-items:center !important;gap:28px !important;}
   }
 </style>
 </helmet>
 
-<div data-screen-label="YSG News Page" style="min-height:100vh;background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;">
+<div data-screen-label="YSG About Page" style="min-height:100vh;background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;">
 
   <nav style="position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);">
     <div class="ysg-navbar {{ navOpenClass }}" style="max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
@@ -114,11 +122,11 @@
       </a>
       <div id="ysg-desktop-links" style="display:flex;align-items:center;gap:22px;">
         <a href="/" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navHome }}</a>
-        <a href="index.html#services" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navServices }}</a>
-        <a href="training.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navTraining }}</a>
-        <a href="careers.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navCareers }}</a>
-        <a href="news.html" style="font-size:15.5px;font-weight:600;color:var(--fg);white-space:nowrap;">{{ navNews }}</a>
-        <a href="about.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navAbout }}</a>
+        <a href="../index.html#services" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navServices }}</a>
+        <a href="../training.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navTraining }}</a>
+        <a href="../careers.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navCareers }}</a>
+        <a href="../news.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navNews }}</a>
+        <a href="../about.html" style="font-size:15.5px;font-weight:600;color:var(--fg);white-space:nowrap;">{{ navAbout }}</a>
       </div>
       <div style="display:flex;align-items:center;gap:12px;">
         <span class="ysg-lang-wrap" style="position:relative;display:inline-flex;align-items:center;gap:5px;color:var(--fg-muted);">
@@ -134,46 +142,24 @@
             </div>
           </sc-if>
         </span>
-        <a href="index.html#contact" style="display:inline-flex;align-items:center;justify-content:center;min-width:88px;height:34px;box-sizing:border-box;background:var(--accent);color:#fff;font-size:14.5px;font-weight:600;padding:0 12px;border-radius:10px;transition:filter .15s,transform .15s;" style-hover="filter:brightness(1.08);transform:translateY(-1px)">{{ navContact }}</a>
+        <a href="../index.html#contact" style="display:inline-flex;align-items:center;justify-content:center;min-width:88px;height:34px;box-sizing:border-box;background:var(--accent);color:#fff;font-size:14.5px;font-weight:600;padding:0 12px;border-radius:10px;transition:filter .15s,transform .15s;" style-hover="filter:brightness(1.08);transform:translateY(-1px)">{{ navContact }}</a>
         <label id="ysg-nav-toggle-label" aria-label="Menu" onClick="{{ toggleNav }}"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"></line><line x1="0" y1="7" x2="18" y2="7"></line><line x1="0" y1="13" x2="18" y2="13"></line></svg></label>
       </div>
     </div>
   </nav>
 
-  <!-- NEWS -->
-  <section style="max-width:1200px;margin:0 auto;padding:36px 32px 21px;">
-    <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:24px;">
-      <h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3.4vw,38px);font-weight:600;letter-spacing:-.025em;line-height:1.05;margin:0;color:var(--fg);">{{ newsHeading }}</h1>
-      <span style="width:1px;align-self:stretch;background:var(--border-2);"></span>
-      <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0;max-width:480px;">{{ newsIntro }}</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;">
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s,box-shadow .2s;" style-hover="border-color:var(--accent-line);transform:translateY(-3px);box-shadow:var(--shadow)">
-        <div style="aspect-ratio:16/9;overflow:hidden;"><image-slot id="ysg-news-1" shape="rect" src="uploads/c-insight.png" placeholder="Drop article image" style="width:100%;height:100%;display:block;"></image-slot></div>
-        <div style="padding:14px;display:flex;flex-direction:column;gap:6px;flex:1;">
-          <div style="display:flex;align-items:center;gap:10px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">{{ sourceExternal }} CRN</span><span style="font-size:11.5px;color:var(--fg-dim);">2026</span></div>
-          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin:0;color:var(--fg);">“The 10 Coolest MSP Tools of 2026 (So Far)”</h3>
-          <p style="font-size:13px;line-height:1.5;color:var(--fg-muted);margin:0;flex:1;">{{ newsDesc1 }}</p>
-          <a href="https://www.crn.com/news/managed-services/2026/the-10-coolest-msp-tools-of-2026-so-far" target="_blank" rel="nofollow noopener noreferrer" style="font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px;margin-top:2px;">{{ readOnCRN }} <span style="font-size:15px;">→</span></a>
+  <!-- ABOUT -->
+  <section style="padding:44px 0 48px;">
+    <div style="max-width:1200px;margin:0 auto 24px;padding:0 32px;width:100%;box-sizing:border-box;"><h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,3.6vw,42px);font-weight:600;letter-spacing:-.025em;line-height:1.05;margin:0;color:var(--fg);">{{ aboutHeading }}</h1></div>
+    <div class="ysg-about-grid" style="max-width:1200px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:36px;align-items:center;">
+      <div style="position:relative;">
+        <div style="aspect-ratio:1.47;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow);">
+          <image-slot id="ysg-about" shape="rect" src="../uploads/cc_brwn.png" placeholder="Founder portrait: plain photo, no text/graphics overlay, warm natural lighting, working or looking at camera, 3:2 landscape" style="width:100%;height:100%;display:block;"></image-slot>
         </div>
       </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s,box-shadow .2s;" style-hover="border-color:var(--accent-line);transform:translateY(-3px);box-shadow:var(--shadow)">
-        <div style="aspect-ratio:16/9;overflow:hidden;"><image-slot id="ysg-news-2" shape="rect" src="uploads/c-headset.png" placeholder="Drop article image" style="width:100%;height:100%;display:block;"></image-slot></div>
-        <div style="padding:14px;display:flex;flex-direction:column;gap:6px;flex:1;">
-          <div style="display:flex;align-items:center;gap:10px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">{{ sourceExternal }} Automation Anywhere</span><span style="font-size:11.5px;color:var(--fg-dim);">May 2026</span></div>
-          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin:0;color:var(--fg);">“Automation Anywhere Fulfills More Than One Billion IT Service Requests”</h3>
-          <p style="font-size:13px;line-height:1.5;color:var(--fg-muted);margin:0;flex:1;">{{ newsDesc2 }}</p>
-          <a href="https://www.automationanywhere.com/company/press-room/automation-anywhere-fulfills-more-one-billion-it-service-requests-announces-2026" target="_blank" rel="nofollow noopener noreferrer" style="font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px;margin-top:2px;">{{ readPressRelease }} <span style="font-size:15px;">→</span></a>
-        </div>
-      </div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s,box-shadow .2s;" style-hover="border-color:var(--accent-line);transform:translateY(-3px);box-shadow:var(--shadow)">
-        <div style="aspect-ratio:16/9;overflow:hidden;"><image-slot id="ysg-news-3" shape="rect" src="uploads/c- ai.png" placeholder="Drop article image" style="width:100%;height:100%;display:block;"></image-slot></div>
-        <div style="padding:14px;display:flex;flex-direction:column;gap:6px;flex:1;">
-          <div style="display:flex;align-items:center;gap:10px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);">{{ sourceExternal }} The Economic Times</span><span style="font-size:11.5px;color:var(--fg-dim);">2026</span></div>
-          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:16.5px;font-weight:600;letter-spacing:-.01em;line-height:1.25;margin:0;color:var(--fg);">“Tech's Brutal Layoffs Continue, and India Alone Is Losing Up to 35,000 Jobs”</h3>
-          <p style="font-size:13px;line-height:1.5;color:var(--fg-muted);margin:0;flex:1;">{{ newsDesc3 }}</p>
-          <a href="https://economictimes.indiatimes.com/news/company/corporate-trends/techs-brutal-layoffs-continue-and-india-alone-losing-up-to-35000-jobs/articleshow/132282955.cms" target="_blank" rel="nofollow noopener noreferrer" style="font-size:13px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:6px;margin-top:2px;">{{ readOnET }} <span style="font-size:15px;">→</span></a>
-        </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;">
+        <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0 0 14px;">{{ aboutP1 }}</p>
+        <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0;">{{ aboutP2 }}</p>
       </div>
     </div>
   </section>
@@ -189,9 +175,9 @@
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <a href="/" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navHome }}</a>
-        <a href="index.html#services" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navServices }}</a>
-        <a href="training.html" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navTraining }}</a>
-        <a href="careers.html" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navCareers }}</a>
+        <a href="../index.html#services" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navServices }}</a>
+        <a href="../training.html" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navTraining }}</a>
+        <a href="../careers.html" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navCareers }}</a>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <button onclick="{{ openTos }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ docLabelTos }}</button>
@@ -274,11 +260,9 @@
 const I18N = {
   en: {
     navHome:'Home', navServices:'Services & Support', navTraining:'Training', navCareers:'Careers', navNews:'News', navAbout:'About', navContact:'Contact',
-    newsHeading:'News & Insights', newsIntro:'Updates from YSG and practical guidance on managed IT, security, and the cloud.',
-    sourceExternal:'External ·', readOnCRN:'Read on CRN', readPressRelease:'Read the press release', readOnET:'Read on Economic Times',
-    newsDesc1:'CRN rounds up the tools standing out across the managed services industry this year.',
-    newsDesc2:'A milestone announcement on AI-driven IT service desk automation at enterprise scale.',
-    newsDesc3:"A look at the ongoing wave of technology job cuts and what's driving it in 2026.",
+    aboutHeading:'About YSG',
+    aboutP1:"Your Support Genie (YSG) was founded to help start-ups, micro, and small businesses address the technology challenges that come with growth by delivering dependable IT, cybersecurity, and cloud services tailored to their needs. Our goal is to become a trusted technology partner that keeps systems secure, reliable, and efficient, allowing business owners to focus on running and growing their business with confidence. Our vision is to make quality IT accessible to every business, regardless of size, delivered through responsive support, practical solutions, and clear, honest advice.",
+    aboutP2:"YSG is built on an entrepreneur's drive and years of hands-on technical support experience gained by solving real business challenges. That experience shapes our approach—practical, accountable, and focused on building long-term relationships through dependable service, proactive guidance, and technology solutions that grow alongside our clients and partners. We also partner with established MSPs to extend capacity and deliver successful outcomes for shared clients.",
     docLabels:{ tos:'Terms of Service', privacy:'Privacy Policy', compliance:'Compliance', agreements:'Agreements', cookie:'Cookie settings', disclaimer:'Disclaimer', datasec:'Data Privacy', dns:'FAQ' },
     footerRegistered:'(Registered under the Companies Act, 2013)', footerRegOffice:'Registered Office: Bangalore - 560043, Karnataka, India',
     footerContactLabel:'Contact:', footerPhoneWord:'Phone:', footerEmailWord:'Email:',
@@ -343,11 +327,9 @@ const I18N = {
   },
   es: {
     navHome:'Inicio', navServices:'Servicios y Soporte', navTraining:'Formación', navCareers:'Empleo', navNews:'Noticias', navAbout:'Nosotros', navContact:'Contacto',
-    newsHeading:'Noticias y Novedades', newsIntro:'Novedades de YSG y orientación práctica sobre TI gestionada, seguridad y la nube.',
-    sourceExternal:'Externo ·', readOnCRN:'Leer en CRN', readPressRelease:'Leer el comunicado de prensa', readOnET:'Leer en Economic Times',
-    newsDesc1:'CRN reúne las herramientas más destacadas del sector de servicios gestionados este año.',
-    newsDesc2:'Un anuncio histórico sobre la automatización de la mesa de ayuda de TI impulsada por IA a escala empresarial.',
-    newsDesc3:'Un vistazo a la ola continua de recortes de empleo en tecnología y qué la está impulsando en 2026.',
+    aboutHeading:'Sobre YSG',
+    aboutP1:'Your Support Genie (YSG) se fundó para ayudar a startups, micro y pequeñas empresas a abordar los desafíos tecnológicos que surgen con el crecimiento, ofreciendo servicios confiables de TI, ciberseguridad y nube adaptados a sus necesidades. Nuestro objetivo es convertirnos en un socio tecnológico de confianza que mantenga los sistemas seguros, fiables y eficientes, permitiendo a los propietarios de negocios centrarse en dirigir y hacer crecer su empresa con confianza. Nuestra visión es hacer que la TI de calidad sea accesible para cualquier empresa, sin importar su tamaño, mediante soporte receptivo, soluciones prácticas y asesoramiento claro y honesto.',
+    aboutP2:'YSG se construye sobre el impulso emprendedor y años de experiencia práctica en soporte técnico, adquirida resolviendo desafíos empresariales reales. Esa experiencia da forma a nuestro enfoque: práctico, responsable y centrado en construir relaciones a largo plazo mediante un servicio fiable, orientación proactiva y soluciones tecnológicas que crecen junto con nuestros clientes y socios. También colaboramos con proveedores MSP consolidados para ampliar nuestra capacidad y ofrecer resultados exitosos a los clientes compartidos.',
     docLabels:{ tos:'Términos del Servicio', privacy:'Política de Privacidad', compliance:'Cumplimiento', agreements:'Acuerdos', cookie:'Preferencias de cookies', disclaimer:'Aviso Legal', datasec:'Privacidad de Datos', dns:'Preguntas Frecuentes' },
     footerRegistered:'(Inscrita conforme a la Ley de Sociedades de 2013)', footerRegOffice:'Domicilio social: Bangalore - 560043, Karnataka, India',
     footerContactLabel:'Contacto:', footerPhoneWord:'Teléfono:', footerEmailWord:'Correo electrónico:',
@@ -412,11 +394,9 @@ const I18N = {
   },
   de: {
     navHome:'Startseite', navServices:'Services & Support', navTraining:'Schulungen', navCareers:'Karriere', navNews:'Neuigkeiten', navAbout:'Über uns', navContact:'Kontakt',
-    newsHeading:'Neuigkeiten & Einblicke', newsIntro:'Updates von YSG und praktische Hinweise zu verwalteten IT-Services, Sicherheit und Cloud.',
-    sourceExternal:'Extern ·', readOnCRN:'Bei CRN lesen', readPressRelease:'Pressemitteilung lesen', readOnET:'Bei Economic Times lesen',
-    newsDesc1:'CRN stellt die herausragenden Tools der Managed-Services-Branche in diesem Jahr zusammen.',
-    newsDesc2:'Eine wegweisende Ankündigung zur KI-gestützten Automatisierung des IT-Service-Desks im Unternehmensmaßstab.',
-    newsDesc3:'Ein Blick auf die anhaltende Welle von Stellenstreichungen in der Technologiebranche und ihre Ursachen im Jahr 2026.',
+    aboutHeading:'Über YSG',
+    aboutP1:'Your Support Genie (YSG) wurde gegründet, um Start-ups, Kleinst- und kleinen Unternehmen zu helfen, die mit Wachstum einhergehenden technologischen Herausforderungen zu bewältigen, indem zuverlässige IT-, Cybersicherheits- und Cloud-Services angeboten werden, die auf ihre Bedürfnisse zugeschnitten sind. Unser Ziel ist es, ein vertrauenswürdiger Technologiepartner zu werden, der Systeme sicher, zuverlässig und effizient hält, damit sich Unternehmer mit Zuversicht auf die Führung und das Wachstum ihres Geschäfts konzentrieren können. Unsere Vision ist es, hochwertige IT für jedes Unternehmen zugänglich zu machen, unabhängig von der Größe, durch reaktionsschnellen Support, praktische Lösungen und klare, ehrliche Beratung.',
+    aboutP2:'YSG basiert auf unternehmerischem Antrieb und jahrelanger praktischer Erfahrung im technischen Support, die durch die Lösung realer Geschäftsprobleme gewonnen wurde. Diese Erfahrung prägt unseren Ansatz — praktisch, verantwortungsbewusst und darauf ausgerichtet, langfristige Beziehungen durch zuverlässigen Service, proaktive Beratung und Technologielösungen aufzubauen, die mit unseren Kunden und Partnern mitwachsen. Wir arbeiten außerdem mit etablierten MSPs zusammen, um Kapazitäten zu erweitern und erfolgreiche Ergebnisse für gemeinsame Kunden zu liefern.',
     docLabels:{ tos:'Nutzungsbedingungen', privacy:'Datenschutzerklärung', compliance:'Compliance', agreements:'Vereinbarungen', cookie:'Cookie-Einstellungen', disclaimer:'Haftungsausschluss', datasec:'Datenschutz & Sicherheit', dns:'FAQ' },
     footerRegistered:'(Eingetragen nach dem Companies Act, 2013)', footerRegOffice:'Eingetragener Sitz: Bangalore - 560043, Karnataka, Indien',
     footerContactLabel:'Kontakt:', footerPhoneWord:'Telefon:', footerEmailWord:'E-Mail:',
@@ -481,11 +461,9 @@ const I18N = {
   },
   pt: {
     navHome:'Início', navServices:'Serviços e Suporte', navTraining:'Formação', navCareers:'Carreiras', navNews:'Notícias', navAbout:'Sobre nós', navContact:'Contacto',
-    newsHeading:'Notícias e Perspetivas', newsIntro:'Novidades da YSG e orientação prática sobre TI gerida, segurança e cloud.',
-    sourceExternal:'Externo ·', readOnCRN:'Ler na CRN', readPressRelease:'Ler o comunicado de imprensa', readOnET:'Ler no Economic Times',
-    newsDesc1:'A CRN reúne as ferramentas que se destacaram no setor de serviços geridos este ano.',
-    newsDesc2:'Um anúncio histórico sobre a automação do help desk de TI orientada por IA à escala empresarial.',
-    newsDesc3:'Um olhar sobre a onda contínua de cortes de emprego na tecnologia e o que a está a impulsionar em 2026.',
+    aboutHeading:'Sobre a YSG',
+    aboutP1:'A Your Support Genie (YSG) foi fundada para ajudar startups, micro e pequenas empresas a enfrentar os desafios tecnológicos que acompanham o crescimento, fornecendo serviços fiáveis de TI, cibersegurança e cloud adaptados às suas necessidades. O nosso objetivo é tornarmo-nos um parceiro tecnológico de confiança que mantém os sistemas seguros, fiáveis e eficientes, permitindo que os empresários se concentrem em gerir e fazer crescer o seu negócio com confiança. A nossa visão é tornar a TI de qualidade acessível a qualquer empresa, independentemente da dimensão, através de suporte reativo, soluções práticas e conselhos claros e honestos.',
+    aboutP2:'A YSG é construída sobre o espírito empreendedor e anos de experiência prática em suporte técnico, adquirida na resolução de desafios empresariais reais. Essa experiência molda a nossa abordagem — prática, responsável e focada na construção de relações de longo prazo através de um serviço fiável, orientação proativa e soluções tecnológicas que crescem junto com os nossos clientes e parceiros. Também trabalhamos com MSPs estabelecidos para ampliar a capacidade e entregar resultados bem-sucedidos para clientes partilhados.',
     docLabels:{ tos:'Termos de Serviço', privacy:'Política de Privacidade', compliance:'Conformidade', agreements:'Acordos', cookie:'Definições de cookies', disclaimer:'Aviso Legal', datasec:'Privacidade de Dados', dns:'Perguntas Frequentes' },
     footerRegistered:'(Registada ao abrigo da Lei das Sociedades de 2013)', footerRegOffice:'Sede Registada: Bangalore - 560043, Karnataka, Índia',
     footerContactLabel:'Contacto:', footerPhoneWord:'Telefone:', footerEmailWord:'E-mail:',
@@ -618,9 +596,7 @@ class Component extends DCLogic {
         { label: 'PT', select: () => this.selectLang('pt') },
       ],
       navHome: L.navHome, navServices: L.navServices, navTraining: L.navTraining, navCareers: L.navCareers, navNews: L.navNews, navAbout: L.navAbout, navContact: L.navContact,
-      newsHeading: L.newsHeading, newsIntro: L.newsIntro,
-      sourceExternal: L.sourceExternal, readOnCRN: L.readOnCRN, readPressRelease: L.readPressRelease, readOnET: L.readOnET,
-      newsDesc1: L.newsDesc1, newsDesc2: L.newsDesc2, newsDesc3: L.newsDesc3,
+      aboutHeading: L.aboutHeading, aboutP1: L.aboutP1, aboutP2: L.aboutP2,
       footerRegistered: L.footerRegistered, footerRegOffice: L.footerRegOffice, footerContactLabel: L.footerContactLabel, footerPhoneWord: L.footerPhoneWord, footerEmailWord: L.footerEmailWord,
       docLabelTos: L.docLabels.tos, docLabelPrivacy: L.docLabels.privacy, docLabelCompliance: L.docLabels.compliance, docLabelAgreements: L.docLabels.agreements,
       docLabelCookie: L.docLabels.cookie, docLabelDisclaimer: L.docLabels.disclaimer, docLabelDatasec: L.docLabels.datasec, docLabelDns: L.docLabels.dns,
