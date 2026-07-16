@@ -88,7 +88,9 @@
     .ysg-navbar{padding:0 18px !important;}
     #ysg-name-grid{grid-template-columns:1fr !important;}
     div[style*="max-width:1200px"]{padding-left:18px !important;padding-right:18px !important;}
-    footer div[style*="justify-content:space-between"]{flex-direction:column;align-items:center !important;gap:28px !important;}
+    footer div[style*="justify-content:space-between"]{flex-direction:column;align-items:stretch !important;gap:20px !important;}
+    .ysg-footer-desktop-links{display:none !important;}
+    .ysg-footer-mobile-links{display:grid !important;grid-template-columns:1fr 1fr;gap:10px 18px;}
     .ysg-hero-grid, .ysg-about-grid{grid-template-columns:1fr !important;}
   }
 </style>
@@ -291,27 +293,43 @@
   <!-- FOOTER -->
   <footer style="border-top:1px solid var(--border);">
     <div style="max-width:1200px;margin:0 auto;padding:28px 32px;display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;">
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <span style="font-size:13px;color:var(--fg);font-weight:600;line-height:1.25;">© {{ year }} YSG IT Services (OPC) Pvt. Ltd <span style="font-size:12.5px;color:var(--fg-dim);font-weight:400;">{{ allRightsReserved }}</span></span>
-        <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">{{ footerRegistered }}</span>
+      <div class="ysg-footer-company" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;text-align:left;">
+        <span style="font-size:13px;color:var(--fg);font-weight:600;line-height:1.25;">© {{ year }} YSG IT Services (OPC) Pvt. Ltd</span>
+        <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">{{ allRightsReserved }}</span>
         <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">{{ footerRegOffice }}</span>
         <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <a href="tel:+916302840055" style="color:inherit;text-decoration:none;" style-hover="color:var(--accent)">+91 630 284 0055</a>&nbsp; |&nbsp; <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><path d="M22 6l-10 7L2 6"></path></svg> <a href="mailto:contact@yoursupportgenie.com" style="color:inherit;text-decoration:none;" style-hover="color:var(--accent)">contact@yoursupportgenie.com</a></span>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
+      <div class="ysg-footer-desktop-links" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <a href="/" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;transition:color .15s;" style-hover="color:var(--fg)">{{ navHome }}</a>
         <a href="#services" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;transition:color .15s;" style-hover="color:var(--fg)">{{ navServices }}</a>
         <a href="training.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;transition:color .15s;" style-hover="color:var(--fg)">{{ navTraining }}</a>
         <a href="careers.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;transition:color .15s;" style-hover="color:var(--fg)">{{ navCareers }}</a>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
+      <div class="ysg-footer-desktop-links" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <sc-for list="{{ docsCol1 }}" as="item" hint-placeholder-count="4">
           <button onclick="{{ item.open }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ item.label }}</button>
         </sc-for>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
+      <div class="ysg-footer-desktop-links" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <sc-for list="{{ docsCol2 }}" as="item" hint-placeholder-count="4">
           <button onclick="{{ item.open }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ item.label }}</button>
         </sc-for>
+      </div>
+      <div class="ysg-footer-mobile-links" style="display:none;">
+        <a href="/" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navHome }}</a>
+        <button onclick="{{ openTos }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelTos }}</button>
+        <a href="#services" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navServices }}</a>
+        <button onclick="{{ openPrivacy }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelPrivacy }}</button>
+        <a href="training.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navTraining }}</a>
+        <button onclick="{{ openCompliance }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelCompliance }}</button>
+        <a href="careers.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navCareers }}</a>
+        <button onclick="{{ openAgreements }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelAgreements }}</button>
+        <a href="news.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navNews }}</a>
+        <button onclick="{{ openCookie }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelCookie }}</button>
+        <a href="about.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navAbout }}</a>
+        <button onclick="{{ openDisclaimer }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelDisclaimer }}</button>
+        <button onclick="{{ openDns }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelDns }}</button>
+        <button onclick="{{ openDatasec }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelDatasec }}</button>
       </div>
     </div>
   </footer>
@@ -385,7 +403,7 @@ const I18N = {
     heroAccent:'Enterprise-Grade IT Services & Support', heroRest:'focused on micro & small businesses', exploreServicesLabel:'Explore our Services',
     heroParagraph:"We give small businesses and start-ups dependable IT support, remote management services, technical training, and a host of flexible services — and partner with established MSPs to share the load and scale delivery. The expertise larger organizations rely on, sized and priced for you. From day-to-day help desk needs to long-term technology planning, we're the partner that keeps your business running.",
     servicesHeading:'Our Services',
-    servicesIntroPre:'Your growth is our priority. Our lean operating model allows us to offer uniquely flexible engagement terms, scalable contract sizing, and highly adaptable pricing tailored to your exact needs. ', servicesIntroLink:'Get in touch', servicesIntroPost:' today to explore how we can collaborate.',
+    servicesIntroPre:'Your growth is our priority. Our lean operating model allows us to offer uniquely flexible engagement terms, scalable contract sizing, and highly adaptable pricing tailored to your exact needs. To explore how we can collaborate, ', servicesIntroLink:'Get in Touch', servicesIntroPost:'!',
     svcITSD:'IT Service Desk', svcSaaS:'SaaS Technical Support', svcNetwork:'Network Services', svcCyber:'Cybersecurity', svcCloud:'Cloud Services', svcDatabase:'Database Services', svcDataScience:'Data Science', svcAI:'AI & Automation',
     contactAccent:'Get in Touch', contactRest:'— Let’s Start Your Digital Journey',
     formHeading:'Send us a Message', labelFirstName:'First Name', phFirstName:'John', labelLastName:'Last Name', phLastName:'Doe',
@@ -394,8 +412,8 @@ const I18N = {
     officeLabel:'Office Location', officeValue:'Bangalore – 560043, Karnataka, India', phoneLabel:'Phone Number', phoneNote:'Local number · international charges may apply',
     emailLabel:'Email Address', hoursLabel:'Business Hours', hoursValue:'Mon–Fri: 9:00 AM – 6:00 PM IST',
     footerRegistered:'(Registered under the Companies Act, 2013)', footerRegOffice:'Registered Office: Bangalore - 560043, Karnataka, India',
-    footerContactLabel:'Contact:', footerPhoneWord:'Phone:', footerEmailWord:'Email:', allRightsReserved:'(All Rights Reserved)',
-    docLabels:{ tos:'Terms of Service', privacy:'Privacy Policy', compliance:'Compliance', agreements:'Agreements', cookie:'Cookie settings', disclaimer:'Disclaimer', datasec:'Data Privacy', dns:'FAQ' },
+    footerContactLabel:'Contact:', footerPhoneWord:'Phone:', footerEmailWord:'Email:', allRightsReserved:'All Rights Reserved',
+    docLabels:{ tos:'Terms of Service', privacy:'Privacy Policy', compliance:'Compliance', agreements:'Agreements', cookie:'Cookie settings', disclaimer:'Disclaimer', datasec:'Data Security', dns:'FAQ' },
     cookieTitle:'Cookie Preferences', cookieDesc:'We use cookies to run this site, understand usage, and improve our managed services. Choose which categories to allow.',
     prefStrictTitle:'Strictly Necessary', prefStrictDesc:'Required for core site functionality and security. Always active.',
     prefFuncTitle:'Functional', prefFuncDesc:'Remembers your preferences such as language and theme.',
@@ -460,7 +478,7 @@ const I18N = {
     heroAccent:'TI Empresarial y Soporte de Primer Nivel', heroRest:'enfocado en micro y pequeñas empresas', exploreServicesLabel:'Ver Nuestros Servicios',
     heroParagraph:'Ofrecemos a pequeñas empresas y startups soporte de TI confiable, servicios de gestión remota, formación técnica y una amplia gama de servicios flexibles — y colaboramos con proveedores MSP consolidados para compartir la carga y escalar la entrega. La experiencia en la que confían las grandes organizaciones, a la medida y al precio adecuado para usted. Desde las necesidades diarias de la mesa de ayuda hasta la planificación tecnológica a largo plazo, somos el socio que mantiene su negocio en marcha.',
     servicesHeading:'Nuestros Servicios',
-    servicesIntroPre:'Su crecimiento es nuestra prioridad. Nuestro modelo operativo ágil nos permite ofrecer condiciones de colaboración excepcionalmente flexibles, tamaños de contrato escalables y precios altamente adaptables a sus necesidades exactas. ', servicesIntroLink:'Póngase en contacto', servicesIntroPost:' hoy mismo para explorar cómo podemos colaborar.',
+    servicesIntroPre:'Su crecimiento es nuestra prioridad. Nuestro modelo operativo ágil nos permite ofrecer condiciones de colaboración excepcionalmente flexibles, tamaños de contrato escalables y precios altamente adaptables a sus necesidades exactas. Para explorar cómo podemos colaborar, ', servicesIntroLink:'Póngase en Contacto', servicesIntroPost:'!',
     svcITSD:'Mesa de Ayuda de TI', svcSaaS:'Soporte Técnico SaaS', svcNetwork:'Servicios de Red', svcCyber:'Ciberseguridad', svcCloud:'Servicios en la Nube', svcDatabase:'Servicios de Bases de Datos', svcDataScience:'Ciencia de Datos', svcAI:'IA y Automatización',
     contactAccent:'Contáctenos', contactRest:'— Comencemos su Recorrido Digital',
     formHeading:'Envíenos un Mensaje', labelFirstName:'Nombre', phFirstName:'Juan', labelLastName:'Apellido', phLastName:'Pérez',
@@ -469,8 +487,8 @@ const I18N = {
     officeLabel:'Ubicación de la Oficina', officeValue:'Bangalore – 560043, Karnataka, India', phoneLabel:'Número de Teléfono', phoneNote:'Número local · pueden aplicarse cargos internacionales',
     emailLabel:'Correo Electrónico', hoursLabel:'Horario de Atención', hoursValue:'Lun–Vie: 9:00 – 18:00 IST',
     footerRegistered:'(Inscrita conforme a la Ley de Sociedades de 2013)', footerRegOffice:'Domicilio social: Bangalore - 560043, Karnataka, India',
-    footerContactLabel:'Contacto:', footerPhoneWord:'Teléfono:', footerEmailWord:'Correo electrónico:', allRightsReserved:'(Todos los derechos reservados)',
-    docLabels:{ tos:'Términos del Servicio', privacy:'Política de Privacidad', compliance:'Cumplimiento', agreements:'Acuerdos', cookie:'Preferencias de cookies', disclaimer:'Aviso Legal', datasec:'Privacidad de Datos', dns:'Preguntas Frecuentes' },
+    footerContactLabel:'Contacto:', footerPhoneWord:'Teléfono:', footerEmailWord:'Correo electrónico:', allRightsReserved:'Todos los derechos reservados',
+    docLabels:{ tos:'Términos del Servicio', privacy:'Política de Privacidad', compliance:'Cumplimiento', agreements:'Acuerdos', cookie:'Preferencias de cookies', disclaimer:'Aviso Legal', datasec:'Seguridad de Datos', dns:'Preguntas Frecuentes' },
     cookieTitle:'Preferencias de Cookies', cookieDesc:'Utilizamos cookies para ejecutar este sitio, comprender su uso y mejorar nuestros servicios gestionados. Elija qué categorías desea permitir.',
     prefStrictTitle:'Estrictamente Necesarias', prefStrictDesc:'Necesarias para el funcionamiento básico del sitio y la seguridad. Siempre activas.',
     prefFuncTitle:'Funcionales', prefFuncDesc:'Recuerdan sus preferencias, como el idioma y el tema.',
@@ -535,7 +553,7 @@ const I18N = {
     heroAccent:'Erstklassiger IT-Service und Support', heroRest:'für Kleinstunternehmen und kleine Unternehmen', exploreServicesLabel:'Services entdecken',
     heroParagraph:'Wir bieten kleinen Unternehmen und Start-ups zuverlässigen IT-Support, Remote-Management-Services, technische Schulungen und eine Vielzahl flexibler Dienstleistungen — und arbeiten mit etablierten MSPs zusammen, um die Last zu teilen und die Bereitstellung zu skalieren. Die Expertise, auf die sich größere Organisationen verlassen, zugeschnitten und preislich passend für Sie. Von den täglichen Anforderungen des Helpdesks bis zur langfristigen Technologieplanung sind wir der Partner, der Ihr Unternehmen am Laufen hält.',
     servicesHeading:'Unsere Services',
-    servicesIntroPre:'Ihr Wachstum hat für uns Priorität. Unser schlankes Betriebsmodell ermöglicht es uns, außergewöhnlich flexible Vertragsbedingungen, skalierbare Vertragsgrößen und hochgradig anpassbare Preise anzubieten, die genau auf Ihre Bedürfnisse zugeschnitten sind. ', servicesIntroLink:'Kontaktieren Sie uns', servicesIntroPost:' noch heute, um zu besprechen, wie wir zusammenarbeiten können.',
+    servicesIntroPre:'Ihr Wachstum hat für uns Priorität. Unser schlankes Betriebsmodell ermöglicht es uns, außergewöhnlich flexible Vertragsbedingungen, skalierbare Vertragsgrößen und hochgradig anpassbare Preise anzubieten, die genau auf Ihre Bedürfnisse zugeschnitten sind. Um die Zusammenarbeit zu besprechen, ', servicesIntroLink:'Kontaktieren Sie uns', servicesIntroPost:'!',
     svcITSD:'IT-Service-Desk', svcSaaS:'SaaS-Technischer Support', svcNetwork:'Netzwerkdienste', svcCyber:'Cybersicherheit', svcCloud:'Cloud-Services', svcDatabase:'Datenbankdienste', svcDataScience:'Data Science', svcAI:'KI & Automatisierung',
     contactAccent:'Kontaktieren Sie uns', contactRest:'— Starten wir Ihre digitale Reise',
     formHeading:'Senden Sie uns eine Nachricht', labelFirstName:'Vorname', phFirstName:'Max', labelLastName:'Nachname', phLastName:'Mustermann',
@@ -544,8 +562,8 @@ const I18N = {
     officeLabel:'Bürostandort', officeValue:'Bangalore – 560043, Karnataka, Indien', phoneLabel:'Telefonnummer', phoneNote:'Lokale Nummer · es können internationale Gebühren anfallen',
     emailLabel:'E-Mail-Adresse', hoursLabel:'Geschäftszeiten', hoursValue:'Mo–Fr: 9:00 – 18:00 Uhr IST',
     footerRegistered:'(Eingetragen nach dem Companies Act, 2013)', footerRegOffice:'Eingetragener Sitz: Bangalore - 560043, Karnataka, Indien',
-    footerContactLabel:'Kontakt:', footerPhoneWord:'Telefon:', footerEmailWord:'E-Mail:', allRightsReserved:'(Alle Rechte vorbehalten)',
-    docLabels:{ tos:'Nutzungsbedingungen', privacy:'Datenschutzerklärung', compliance:'Compliance', agreements:'Vereinbarungen', cookie:'Cookie-Einstellungen', disclaimer:'Haftungsausschluss', datasec:'Datenschutz & Sicherheit', dns:'FAQ' },
+    footerContactLabel:'Kontakt:', footerPhoneWord:'Telefon:', footerEmailWord:'E-Mail:', allRightsReserved:'Alle Rechte vorbehalten',
+    docLabels:{ tos:'Nutzungsbedingungen', privacy:'Datenschutzerklärung', compliance:'Compliance', agreements:'Vereinbarungen', cookie:'Cookie-Einstellungen', disclaimer:'Haftungsausschluss', datasec:'Datensicherheit', dns:'FAQ' },
     cookieTitle:'Cookie-Einstellungen', cookieDesc:'Wir verwenden Cookies, um diese Website zu betreiben, die Nutzung zu verstehen und unsere verwalteten Services zu verbessern. Wählen Sie, welche Kategorien Sie zulassen möchten.',
     prefStrictTitle:'Unbedingt erforderlich', prefStrictDesc:'Erforderlich für die Kernfunktionalität und Sicherheit der Website. Immer aktiv.',
     prefFuncTitle:'Funktional', prefFuncDesc:'Speichert Ihre Präferenzen wie Sprache und Design.',
@@ -610,7 +628,7 @@ const I18N = {
     heroAccent:'TI Empresarial e Suporte de Excelência', heroRest:'focado em micro e pequenas empresas', exploreServicesLabel:'Explore os Nossos Serviços',
     heroParagraph:'Damos a pequenas empresas e startups suporte de TI fiável, serviços de gestão remota, formação técnica e um leque de serviços flexíveis — e trabalhamos com MSPs estabelecidos para partilhar a carga e escalar a entrega. A experiência em que as grandes organizações confiam, à medida e ao preço certo para si. Desde as necessidades diárias do help desk até ao planeamento tecnológico de longo prazo, somos o parceiro que mantém o seu negócio a funcionar.',
     servicesHeading:'Os Nossos Serviços',
-    servicesIntroPre:'O seu crescimento é a nossa prioridade. O nosso modelo operacional ágil permite-nos oferecer condições de colaboração excecionalmente flexíveis, dimensões de contrato escaláveis e preços altamente adaptáveis às suas necessidades exatas. ', servicesIntroLink:'Entre em contacto', servicesIntroPost:' hoje mesmo para explorar como podemos colaborar.',
+    servicesIntroPre:'O seu crescimento é a nossa prioridade. O nosso modelo operacional ágil permite-nos oferecer condições de colaboração excecionalmente flexíveis, dimensões de contrato escaláveis e preços altamente adaptáveis às suas necessidades exatas. Para explorar como podemos colaborar, ', servicesIntroLink:'Entre em Contacto', servicesIntroPost:'!',
     svcITSD:'Help Desk de TI', svcSaaS:'Suporte Técnico SaaS', svcNetwork:'Serviços de Rede', svcCyber:'Cibersegurança', svcCloud:'Serviços Cloud', svcDatabase:'Serviços de Bases de Dados', svcDataScience:'Data Science', svcAI:'IA e Automação',
     contactAccent:'Fale Connosco', contactRest:'— Vamos Iniciar a Sua Jornada Digital',
     formHeading:'Envie-nos uma Mensagem', labelFirstName:'Nome Próprio', phFirstName:'João', labelLastName:'Apelido', phLastName:'Silva',
@@ -619,8 +637,8 @@ const I18N = {
     officeLabel:'Localização do Escritório', officeValue:'Bangalore – 560043, Karnataka, Índia', phoneLabel:'Número de Telefone', phoneNote:'Número local · podem aplicar-se tarifas internacionais',
     emailLabel:'Endereço de E-mail', hoursLabel:'Horário de Funcionamento', hoursValue:'Seg–Sex: 9:00 – 18:00 IST',
     footerRegistered:'(Registada ao abrigo da Lei das Sociedades de 2013)', footerRegOffice:'Sede Registada: Bangalore - 560043, Karnataka, Índia',
-    footerContactLabel:'Contacto:', footerPhoneWord:'Telefone:', footerEmailWord:'E-mail:', allRightsReserved:'(Todos os direitos reservados)',
-    docLabels:{ tos:'Termos de Serviço', privacy:'Política de Privacidade', compliance:'Conformidade', agreements:'Acordos', cookie:'Definições de cookies', disclaimer:'Aviso Legal', datasec:'Privacidade de Dados', dns:'Perguntas Frequentes' },
+    footerContactLabel:'Contacto:', footerPhoneWord:'Telefone:', footerEmailWord:'E-mail:', allRightsReserved:'Todos os direitos reservados',
+    docLabels:{ tos:'Termos de Serviço', privacy:'Política de Privacidade', compliance:'Conformidade', agreements:'Acordos', cookie:'Definições de cookies', disclaimer:'Aviso Legal', datasec:'Segurança de Dados', dns:'Perguntas Frequentes' },
     cookieTitle:'Preferências de Cookies', cookieDesc:'Utilizamos cookies para operar este site, compreender a utilização e melhorar os nossos serviços geridos. Escolha que categorias deseja permitir.',
     prefStrictTitle:'Estritamente Necessários', prefStrictDesc:'Necessários para o funcionamento e segurança essenciais do site. Sempre ativos.',
     prefFuncTitle:'Funcionais', prefFuncDesc:'Memorizam as suas preferências, como idioma e tema.',
@@ -857,6 +875,28 @@ class Component extends DCLogic {
         { label: L.docLabels.datasec, open: () => this.openDoc('datasec') },
         { label: L.docLabels.dns, open: () => this.openDoc('dns') },
       ],
+      docsCol2Mobile: [
+        { label: L.docLabels.cookie, open: this.openCookie },
+        { label: L.docLabels.disclaimer, open: () => this.openDoc('disclaimer') },
+        { label: L.docLabels.datasec, open: () => this.openDoc('datasec') },
+      ],
+      faqLabel: L.docLabels.dns,
+      openFaq: () => this.openDoc('dns'),
+      openTos: () => this.openDoc('tos'),
+      openPrivacy: () => this.openDoc('privacy'),
+      openCompliance: () => this.openDoc('compliance'),
+      openAgreements: () => this.openDoc('agreements'),
+      openDisclaimer: () => this.openDoc('disclaimer'),
+      openDatasec: () => this.openDoc('datasec'),
+      openDns: () => this.openDoc('dns'),
+      docLabelTos: L.docLabels.tos,
+      docLabelPrivacy: L.docLabels.privacy,
+      docLabelCompliance: L.docLabels.compliance,
+      docLabelAgreements: L.docLabels.agreements,
+      docLabelCookie: L.docLabels.cookie,
+      docLabelDisclaimer: L.docLabels.disclaimer,
+      docLabelDatasec: L.docLabels.datasec,
+      docLabelDns: L.docLabels.dns,
       docOpen: !!this.state.docOpen,
       closeDoc: this.closeDoc,
       docTitle: doc.title || '',

@@ -75,7 +75,9 @@
   @media (max-width:520px){
     .ysg-navbar{padding:0 18px !important;}
     div[style*="max-width:1200px"]{padding-left:18px !important;padding-right:18px !important;}
-    footer div[style*="justify-content:space-between"]{flex-direction:column;align-items:center !important;gap:28px !important;}
+    footer div[style*="justify-content:space-between"]{flex-direction:column;align-items:stretch !important;gap:20px !important;}
+    .ysg-footer-desktop-links{display:none !important;}
+    .ysg-footer-mobile-links{display:grid !important;grid-template-columns:1fr 1fr;gap:10px 18px;}
   }
 </style>
 </helmet>
@@ -181,29 +183,45 @@
   <!-- FOOTER -->
   <footer style="border-top:1px solid var(--border);">
     <div style="max-width:1200px;margin:0 auto;padding:28px 32px;display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;">
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <span style="font-size:13px;color:var(--fg);font-weight:600;line-height:1.25;">© 2026 YSG IT Services (OPC) Pvt. Ltd <span style="font-size:12.5px;color:var(--fg-dim);font-weight:400;">{{ allRightsReserved }}</span></span>
-        <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">{{ footerRegistered }}</span>
+      <div class="ysg-footer-company" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;text-align:left;">
+        <span style="font-size:13px;color:var(--fg);font-weight:600;line-height:1.25;">© 2026 YSG IT Services (OPC) Pvt. Ltd</span>
+        <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">{{ allRightsReserved }}</span>
         <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">{{ footerRegOffice }}</span>
         <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <a href="tel:+916302840055" style="color:inherit;" style-hover="color:var(--accent)">+91 630 284 0055</a>&nbsp; |&nbsp; <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><path d="M22 6l-10 7L2 6"></path></svg> <a href="mailto:contact@yoursupportgenie.com" style="color:inherit;" style-hover="color:var(--accent)">contact@yoursupportgenie.com</a></span>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
+      <div class="ysg-footer-desktop-links" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <a href="/" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navHome }}</a>
         <a href="index.html#services" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navServices }}</a>
         <a href="training.html" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navTraining }}</a>
         <a href="careers.html" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navCareers }}</a>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
+      <div class="ysg-footer-desktop-links" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <button onclick="{{ openTos }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ docLabelTos }}</button>
         <button onclick="{{ openPrivacy }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ docLabelPrivacy }}</button>
         <button onclick="{{ openCompliance }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ docLabelCompliance }}</button>
         <button onclick="{{ openAgreements }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ docLabelAgreements }}</button>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
+      <div class="ysg-footer-desktop-links" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <button onclick="{{ openCookie }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ docLabelCookie }}</button>
         <button onclick="{{ openDisclaimer }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ docLabelDisclaimer }}</button>
         <button onclick="{{ openDatasec }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ docLabelDatasec }}</button>
         <button onclick="{{ openDns }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ docLabelDns }}</button>
+      </div>
+      <div class="ysg-footer-mobile-links" style="display:none;">
+        <a href="/" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navHome }}</a>
+        <button onclick="{{ openTos }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelTos }}</button>
+        <a href="index.html#services" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navServices }}</a>
+        <button onclick="{{ openPrivacy }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelPrivacy }}</button>
+        <a href="training.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navTraining }}</a>
+        <button onclick="{{ openCompliance }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelCompliance }}</button>
+        <a href="careers.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navCareers }}</a>
+        <button onclick="{{ openAgreements }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelAgreements }}</button>
+        <a href="news.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navNews }}</a>
+        <button onclick="{{ openCookie }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelCookie }}</button>
+        <a href="about.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navAbout }}</a>
+        <button onclick="{{ openDisclaimer }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelDisclaimer }}</button>
+        <button onclick="{{ openDns }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelDns }}</button>
+        <button onclick="{{ openDatasec }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelDatasec }}</button>
       </div>
     </div>
   </footer>
@@ -279,9 +297,9 @@ const I18N = {
     newsDesc1:'CRN rounds up the tools standing out across the managed services industry this year.',
     newsDesc2:'A milestone announcement on AI-driven IT service desk automation at enterprise scale.',
     newsDesc3:"A look at the ongoing wave of technology job cuts and what's driving it in 2026.",
-    docLabels:{ tos:'Terms of Service', privacy:'Privacy Policy', compliance:'Compliance', agreements:'Agreements', cookie:'Cookie settings', disclaimer:'Disclaimer', datasec:'Data Privacy', dns:'FAQ' },
+    docLabels:{ tos:'Terms of Service', privacy:'Privacy Policy', compliance:'Compliance', agreements:'Agreements', cookie:'Cookie settings', disclaimer:'Disclaimer', datasec:'Data Security', dns:'FAQ' },
     footerRegistered:'(Registered under the Companies Act, 2013)', footerRegOffice:'Registered Office: Bangalore - 560043, Karnataka, India',
-    footerContactLabel:'Contact:', footerPhoneWord:'Phone:', footerEmailWord:'Email:', allRightsReserved:'(All Rights Reserved)',
+    footerContactLabel:'Contact:', footerPhoneWord:'Phone:', footerEmailWord:'Email:', allRightsReserved:'All Rights Reserved.',
     cookieTitle:'Cookie Preferences', cookieDesc:'We use cookies to run this site, understand usage, and improve our managed services. Choose which categories to allow.',
     prefStrictTitle:'Strictly Necessary', prefStrictDesc:'Required for core site functionality and security. Always active.',
     prefFuncTitle:'Functional', prefFuncDesc:'Remembers your preferences such as language and theme.',
@@ -348,9 +366,9 @@ const I18N = {
     newsDesc1:'CRN reúne las herramientas más destacadas del sector de servicios gestionados este año.',
     newsDesc2:'Un anuncio histórico sobre la automatización de la mesa de ayuda de TI impulsada por IA a escala empresarial.',
     newsDesc3:'Un vistazo a la ola continua de recortes de empleo en tecnología y qué la está impulsando en 2026.',
-    docLabels:{ tos:'Términos del Servicio', privacy:'Política de Privacidad', compliance:'Cumplimiento', agreements:'Acuerdos', cookie:'Preferencias de cookies', disclaimer:'Aviso Legal', datasec:'Privacidad de Datos', dns:'Preguntas Frecuentes' },
+    docLabels:{ tos:'Términos del Servicio', privacy:'Política de Privacidad', compliance:'Cumplimiento', agreements:'Acuerdos', cookie:'Preferencias de cookies', disclaimer:'Aviso Legal', datasec:'Seguridad de Datos', dns:'Preguntas Frecuentes' },
     footerRegistered:'(Inscrita conforme a la Ley de Sociedades de 2013)', footerRegOffice:'Domicilio social: Bangalore - 560043, Karnataka, India',
-    footerContactLabel:'Contacto:', footerPhoneWord:'Teléfono:', footerEmailWord:'Correo electrónico:', allRightsReserved:'(Todos los derechos reservados)',
+    footerContactLabel:'Contacto:', footerPhoneWord:'Teléfono:', footerEmailWord:'Correo electrónico:', allRightsReserved:'Todos los derechos reservados.',
     cookieTitle:'Preferencias de Cookies', cookieDesc:'Utilizamos cookies para ejecutar este sitio, comprender su uso y mejorar nuestros servicios gestionados. Elija qué categorías desea permitir.',
     prefStrictTitle:'Estrictamente Necesarias', prefStrictDesc:'Necesarias para el funcionamiento básico del sitio y la seguridad. Siempre activas.',
     prefFuncTitle:'Funcionales', prefFuncDesc:'Recuerdan sus preferencias, como el idioma y el tema.',
@@ -417,9 +435,9 @@ const I18N = {
     newsDesc1:'CRN stellt die herausragenden Tools der Managed-Services-Branche in diesem Jahr zusammen.',
     newsDesc2:'Eine wegweisende Ankündigung zur KI-gestützten Automatisierung des IT-Service-Desks im Unternehmensmaßstab.',
     newsDesc3:'Ein Blick auf die anhaltende Welle von Stellenstreichungen in der Technologiebranche und ihre Ursachen im Jahr 2026.',
-    docLabels:{ tos:'Nutzungsbedingungen', privacy:'Datenschutzerklärung', compliance:'Compliance', agreements:'Vereinbarungen', cookie:'Cookie-Einstellungen', disclaimer:'Haftungsausschluss', datasec:'Datenschutz & Sicherheit', dns:'FAQ' },
+    docLabels:{ tos:'Nutzungsbedingungen', privacy:'Datenschutzerklärung', compliance:'Compliance', agreements:'Vereinbarungen', cookie:'Cookie-Einstellungen', disclaimer:'Haftungsausschluss', datasec:'Datensicherheit', dns:'FAQ' },
     footerRegistered:'(Eingetragen nach dem Companies Act, 2013)', footerRegOffice:'Eingetragener Sitz: Bangalore - 560043, Karnataka, Indien',
-    footerContactLabel:'Kontakt:', footerPhoneWord:'Telefon:', footerEmailWord:'E-Mail:', allRightsReserved:'(Alle Rechte vorbehalten)',
+    footerContactLabel:'Kontakt:', footerPhoneWord:'Telefon:', footerEmailWord:'E-Mail:', allRightsReserved:'Alle Rechte vorbehalten.',
     cookieTitle:'Cookie-Einstellungen', cookieDesc:'Wir verwenden Cookies, um diese Website zu betreiben, die Nutzung zu verstehen und unsere verwalteten Services zu verbessern. Wählen Sie, welche Kategorien Sie zulassen möchten.',
     prefStrictTitle:'Unbedingt erforderlich', prefStrictDesc:'Erforderlich für die Kernfunktionalität und Sicherheit der Website. Immer aktiv.',
     prefFuncTitle:'Funktional', prefFuncDesc:'Speichert Ihre Präferenzen wie Sprache und Design.',
@@ -486,9 +504,9 @@ const I18N = {
     newsDesc1:'A CRN reúne as ferramentas que se destacaram no setor de serviços geridos este ano.',
     newsDesc2:'Um anúncio histórico sobre a automação do help desk de TI orientada por IA à escala empresarial.',
     newsDesc3:'Um olhar sobre a onda contínua de cortes de emprego na tecnologia e o que a está a impulsionar em 2026.',
-    docLabels:{ tos:'Termos de Serviço', privacy:'Política de Privacidade', compliance:'Conformidade', agreements:'Acordos', cookie:'Definições de cookies', disclaimer:'Aviso Legal', datasec:'Privacidade de Dados', dns:'Perguntas Frequentes' },
+    docLabels:{ tos:'Termos de Serviço', privacy:'Política de Privacidade', compliance:'Conformidade', agreements:'Acordos', cookie:'Definições de cookies', disclaimer:'Aviso Legal', datasec:'Segurança de Dados', dns:'Perguntas Frequentes' },
     footerRegistered:'(Registada ao abrigo da Lei das Sociedades de 2013)', footerRegOffice:'Sede Registada: Bangalore - 560043, Karnataka, Índia',
-    footerContactLabel:'Contacto:', footerPhoneWord:'Telefone:', footerEmailWord:'E-mail:', allRightsReserved:'(Todos os direitos reservados)',
+    footerContactLabel:'Contacto:', footerPhoneWord:'Telefone:', footerEmailWord:'E-mail:', allRightsReserved:'Todos os direitos reservados.',
     cookieTitle:'Preferências de Cookies', cookieDesc:'Utilizamos cookies para operar este site, compreender a utilização e melhorar os nossos serviços geridos. Escolha que categorias deseja permitir.',
     prefStrictTitle:'Estritamente Necessários', prefStrictDesc:'Necessários para o funcionamento e segurança essenciais do site. Sempre ativos.',
     prefFuncTitle:'Funcionais', prefFuncDesc:'Memorizam as suas preferências, como idioma e tema.',
