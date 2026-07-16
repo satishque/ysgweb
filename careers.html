@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
+<script>try{if(!localStorage.getItem('ysgLang')){localStorage.setItem('ysgLang','de');}}catch(e){}</script>
 <meta charset="utf-8">
-<title>Careers - Your Support Genie (YSG)</title>
+<title>Über YSG - Your Support Genie</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Explore IT careers at Your Support Genie (YSG) — join a growing team supporting small businesses with help desk, cloud, cybersecurity, and more.">
-<link rel="canonical" href="https://www.yoursupportgenie.com/careers.html">
-<link rel="alternate" hreflang="en" href="https://www.yoursupportgenie.com/careers.html">
-<link rel="alternate" hreflang="es" href="https://www.yoursupportgenie.com/es/careers.html">
-<link rel="alternate" hreflang="de" href="https://www.yoursupportgenie.com/de/careers.html">
-<link rel="alternate" hreflang="pt" href="https://www.yoursupportgenie.com/pt/careers.html">
-<link rel="alternate" hreflang="x-default" href="https://www.yoursupportgenie.com/careers.html">
+<meta name="description" content="Über Your Support Genie (YSG) — ein agiler Anbieter verwalteter IT-Services für Start-ups und kleine Unternehmen.">
+<link rel="canonical" href="https://www.yoursupportgenie.com/de/about.html">
+<link rel="alternate" hreflang="en" href="https://www.yoursupportgenie.com/about.html">
+<link rel="alternate" hreflang="es" href="https://www.yoursupportgenie.com/es/about.html">
+<link rel="alternate" hreflang="de" href="https://www.yoursupportgenie.com/de/about.html">
+<link rel="alternate" hreflang="pt" href="https://www.yoursupportgenie.com/pt/about.html">
+<link rel="alternate" hreflang="x-default" href="https://www.yoursupportgenie.com/about.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Careers - Your Support Genie (YSG)">
-<meta property="og:description" content="Explore IT careers at Your Support Genie (YSG) — join a growing team supporting small businesses.">
-<meta property="og:url" content="https://www.yoursupportgenie.com/careers.html">
-<meta property="og:image" content="https://www.yoursupportgenie.com/uploads/favicon-32.png">
+<meta property="og:title" content="Über YSG - Your Support Genie">
+<meta property="og:description" content="Über Your Support Genie (YSG) — ein agiler Anbieter verwalteter IT-Services für Start-ups und kleine Unternehmen.">
+<meta property="og:url" content="https://www.yoursupportgenie.com/de/about.html">
+<meta property="og:image" content="https://www.yoursupportgenie.com/uploads/favicon-512.png">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Careers - Your Support Genie (YSG)">
-<meta name="twitter:description" content="Explore IT careers at Your Support Genie (YSG).">
+<meta name="twitter:title" content="Über YSG - Your Support Genie">
+<meta name="twitter:description" content="About Your Support Genie (YSG), managed IT services for start-ups and small businesses.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Your Support Genie (YSG)","url":"https://www.yoursupportgenie.com/","logo":"https://www.yoursupportgenie.com/uploads/favicon-32.png"}</script>
-<script src="./support.js"></script>
+<script src="../support.js"></script>
 </head>
 <body>
 <x-dc>
@@ -28,10 +29,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="uploads/favicon.svg?v=2">
-<link rel="icon" type="image/png" sizes="32x32" href="uploads/favicon-32.png?v=2">
-<link rel="icon" type="image/png" sizes="16x16" href="uploads/favicon-16.png?v=2">
-<script src="components/image-slot.js"></script>
+<link rel="icon" type="image/png" sizes="32x32" href="../uploads/favicon-32.png?v=3">
+<link rel="icon" type="image/png" sizes="16x16" href="../uploads/favicon-16.png?v=3">
+<link rel="icon" type="image/png" sizes="48x48" href="../uploads/favicon-48.png?v=3">
+<link rel="apple-touch-icon" href="../uploads/apple-touch-icon.png?v=3">
+<script src="../components/image-slot.js"></script>
 <style>
   :root{
     --bg:#ffffff; --surface:#ffffff; --surface-2:#eef1f6;
@@ -81,9 +83,11 @@
   @media (max-width:520px){
     .ysg-navbar{padding:0 18px !important;}
     div[style*="max-width:1200px"]{padding-left:18px !important;padding-right:18px !important;}
+    .ysg-about-grid{grid-template-columns:1fr !important;}
     footer div[style*="justify-content:space-between"]{flex-direction:column;align-items:stretch !important;gap:20px !important;}
     .ysg-footer-desktop-links{display:none !important;}
-    .ysg-footer-mobile-links{display:grid !important;grid-template-columns:1fr 1fr;gap:10px 18px;}
+    .ysg-footer-mobile-links{display:grid !important;grid-template-columns:1fr 1fr;gap:8px 18px;}
+    .ysg-footer-company{gap:6px !important;}
     .ysg-footer-office-full{display:none !important;}
     .ysg-footer-office-short{display:inline !important;}
     .ysg-footer-contact{flex-direction:column;align-items:flex-start !important;gap:4px !important;}
@@ -92,7 +96,7 @@
 </style>
 </helmet>
 
-<div data-screen-label="YSG Careers Page" style="min-height:100vh;background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;">
+<div data-screen-label="YSG About Page" style="min-height:100vh;background:var(--bg);color:var(--fg);font-family:'IBM Plex Sans',sans-serif;-webkit-font-smoothing:antialiased;">
 
   <nav style="position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);">
     <div class="ysg-navbar {{ navOpenClass }}" style="max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
@@ -126,11 +130,11 @@
       </a>
       <div id="ysg-desktop-links" style="display:flex;align-items:center;gap:22px;">
         <a href="/" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navHome }}</a>
-        <a href="index.html#services" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navServices }}</a>
-        <a href="training.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navTraining }}</a>
-        <a href="careers.html" style="font-size:15.5px;font-weight:600;color:var(--fg);white-space:nowrap;">{{ navCareers }}</a>
-        <a href="news.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navNews }}</a>
-        <a href="about.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navAbout }}</a>
+        <a href="../index.html#services" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navServices }}</a>
+        <a href="../training.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navTraining }}</a>
+        <a href="../careers.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navCareers }}</a>
+        <a href="../news.html" style="font-size:15.5px;font-weight:500;color:var(--fg-muted);transition:color .15s;white-space:nowrap;" style-hover="color:var(--fg)">{{ navNews }}</a>
+        <a href="../about.html" style="font-size:15.5px;font-weight:600;color:var(--fg);white-space:nowrap;">{{ navAbout }}</a>
       </div>
       <div style="display:flex;align-items:center;gap:12px;">
         <span class="ysg-lang-wrap" style="position:relative;display:inline-flex;align-items:center;gap:5px;color:var(--fg-muted);">
@@ -146,105 +150,27 @@
             </div>
           </sc-if>
         </span>
-        <a href="index.html#contact" style="display:inline-flex;align-items:center;justify-content:center;min-width:88px;height:34px;box-sizing:border-box;background:var(--accent);color:#fff;font-size:14.5px;font-weight:600;padding:0 12px;border-radius:10px;transition:filter .15s,transform .15s;" style-hover="filter:brightness(1.08);transform:translateY(-1px)">{{ navContact }}</a>
+        <a href="../index.html#contact" style="display:inline-flex;align-items:center;justify-content:center;min-width:88px;height:34px;box-sizing:border-box;background:var(--accent);color:#fff;font-size:14.5px;font-weight:600;padding:0 12px;border-radius:10px;transition:filter .15s,transform .15s;" style-hover="filter:brightness(1.08);transform:translateY(-1px)">{{ navContact }}</a>
         <label id="ysg-nav-toggle-label" aria-label="Menu" onClick="{{ toggleNav }}"><svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="0" y1="1" x2="18" y2="1"></line><line x1="0" y1="7" x2="18" y2="7"></line><line x1="0" y1="13" x2="18" y2="13"></line></svg></label>
       </div>
     </div>
   </nav>
 
-  <!-- WHY WORK AT YSG -->
-  <section style="max-width:1200px;margin:0 auto;padding:36px 32px 6px;">
-    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,2.8vw,30px);font-weight:600;letter-spacing:-.02em;line-height:1.1;margin:0 0 14px;color:var(--fg);">{{ whyHeading }}</h2>
-    <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0 0 12px;max-width:100%;">{{ whyP1 }}</p>
-    <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0 0 12px;max-width:100%;">{{ whyP2 }}</p>
-    <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0;max-width:100%;">{{ whyP3 }}</p>
+  <!-- ABOUT -->
+  <section style="padding:44px 0 48px;">
+    <div style="max-width:1200px;margin:0 auto 24px;padding:0 32px;width:100%;box-sizing:border-box;"><h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,3.6vw,42px);font-weight:600;letter-spacing:-.025em;line-height:1.05;margin:0;color:var(--fg);">{{ aboutHeading }}</h1></div>
+    <div class="ysg-about-grid" style="max-width:1200px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:36px;align-items:center;">
+      <div style="position:relative;">
+        <div style="aspect-ratio:1.47;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow);">
+          <image-slot id="ysg-about" shape="rect" src="../uploads/cc_brwn.png" placeholder="Founder portrait: plain photo, no text/graphics overlay, warm natural lighting, working or looking at camera, 3:2 landscape" style="width:100%;height:100%;display:block;"></image-slot>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;">
+        <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0 0 14px;">{{ aboutP1 }}</p>
+        <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0;">{{ aboutP2 }}</p>
+      </div>
+    </div>
   </section>
-
-  <!-- CAREERS -->
-  <section><div style="max-width:1200px;margin:0 auto;padding:44px 32px 19px;">
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:22px;">
-      <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
-        <h1 style="font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3.4vw,38px);font-weight:600;letter-spacing:-.025em;line-height:1.05;margin:0;color:var(--fg);">{{ careersHeading }}</h1>
-        <span style="width:1px;align-self:stretch;background:var(--border-2);"></span>
-        <p style="font-size:15px;line-height:1.6;color:var(--fg-muted);margin:0;">{{ careersIntroPre }} <a href="mailto:careers@yoursupportgenie.com?subject=Future Opportunity - Resume Submission&body=Hi YSG team, I'd like to be considered for future roles. Please find my resume attached." style="color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:2px;">{{ submitResumeLabel }}</a></p>
-      </div>
-    </div>
-    <div style="display:flex;flex-direction:column;">
-
-      <div class="ysg-stack-row" style="display:flex;gap:20px;align-items:center;padding:14px 0;">
-        <div class="ysg-stack-col" style="width:198px;flex-shrink:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s;" style-hover="animation:ysgCardJiggle .5s ease-out forwards;box-shadow:0 12px 28px -10px rgba(18,22,31,.35);">
-          <div style="padding:10px 16px;background:var(--surface);text-align:center;"><h3 style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0;color:var(--fg);">{{ job1Title }}</h3></div>
-          <img src="uploads/ITSD-0a715527.png" alt="IT Service Desk" style="width:100%;height:121px;display:block;object-fit:cover;">
-        </div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg-muted);margin:0;flex:1;min-width:0;">{{ job1Desc }}</p>
-      </div>
-
-      <div class="ysg-stack-row" style="display:flex;gap:20px;align-items:center;padding:14px 0;">
-        <div class="ysg-stack-col" style="width:198px;flex-shrink:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s;" style-hover="animation:ysgCardJiggle .5s ease-out forwards;box-shadow:0 12px 28px -10px rgba(18,22,31,.35);">
-          <div style="padding:10px 16px;background:var(--surface);text-align:center;"><h3 style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0;color:var(--fg);">{{ job2Title }}</h3></div>
-          <img src="uploads/ESaaS.png" alt="Enterprise SaaS" style="width:100%;height:121px;display:block;object-fit:cover;">
-        </div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg-muted);margin:0;flex:1;min-width:0;">{{ job2Desc }}</p>
-      </div>
-
-      <div class="ysg-stack-row" style="display:flex;gap:20px;align-items:center;padding:14px 0;">
-        <div class="ysg-stack-col" style="width:198px;flex-shrink:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s;" style-hover="animation:ysgCardJiggle .5s ease-out forwards;box-shadow:0 12px 28px -10px rgba(18,22,31,.35);">
-          <div style="padding:10px 16px;background:var(--surface);text-align:center;"><h3 style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0;color:var(--fg);">{{ job3Title }}</h3></div>
-          <img src="uploads/Cyber-bb57c314.png" alt="Cybersecurity" style="width:100%;height:121px;display:block;object-fit:cover;">
-        </div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg-muted);margin:0;flex:1;min-width:0;">{{ job3Desc }}</p>
-      </div>
-
-      <div class="ysg-stack-row" style="display:flex;gap:20px;align-items:center;padding:14px 0;">
-        <div class="ysg-stack-col" style="width:198px;flex-shrink:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s;" style-hover="animation:ysgCardJiggle .5s ease-out forwards;box-shadow:0 12px 28px -10px rgba(18,22,31,.35);">
-          <div style="padding:10px 16px;background:var(--surface);text-align:center;"><h3 style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0;color:var(--fg);">{{ job4Title }}</h3></div>
-          <img src="uploads/Network-a216387f.png" alt="Network" style="width:100%;height:121px;display:block;object-fit:cover;">
-        </div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg-muted);margin:0;flex:1;min-width:0;">{{ job4Desc }}</p>
-      </div>
-
-      <div class="ysg-stack-row" style="display:flex;gap:20px;align-items:center;padding:14px 0;">
-        <div class="ysg-stack-col" style="width:198px;flex-shrink:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s;" style-hover="animation:ysgCardJiggle .5s ease-out forwards;box-shadow:0 12px 28px -10px rgba(18,22,31,.35);">
-          <div style="padding:10px 16px;background:var(--surface);text-align:center;"><h3 style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0;color:var(--fg);">{{ job5Title }}</h3></div>
-          <img src="uploads/Database.png" alt="Database" style="width:100%;height:121px;display:block;object-fit:cover;">
-        </div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg-muted);margin:0;flex:1;min-width:0;">{{ job5Desc }}</p>
-      </div>
-
-      <div class="ysg-stack-row" style="display:flex;gap:20px;align-items:center;padding:14px 0;">
-        <div class="ysg-stack-col" style="width:198px;flex-shrink:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s;" style-hover="animation:ysgCardJiggle .5s ease-out forwards;box-shadow:0 12px 28px -10px rgba(18,22,31,.35);">
-          <div style="padding:10px 16px;background:var(--surface);text-align:center;"><h3 style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0;color:var(--fg);">{{ job6Title }}</h3></div>
-          <img src="uploads/DS.png" alt="Data Analytics" style="width:100%;height:121px;display:block;object-fit:cover;">
-        </div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg-muted);margin:0;flex:1;min-width:0;">{{ job6Desc }}</p>
-      </div>
-
-      <div class="ysg-stack-row" style="display:flex;gap:20px;align-items:center;padding:14px 0;">
-        <div class="ysg-stack-col" style="width:198px;flex-shrink:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s;" style-hover="animation:ysgCardJiggle .5s ease-out forwards;box-shadow:0 12px 28px -10px rgba(18,22,31,.35);">
-          <div style="padding:10px 16px;background:var(--surface);text-align:center;"><h3 style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0;color:var(--fg);">{{ job7Title }}</h3></div>
-          <img src="uploads/AI & Automation.png" alt="AI &amp; Automation" style="width:100%;height:121px;display:block;object-fit:cover;">
-        </div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg-muted);margin:0;flex:1;min-width:0;">{{ job7Desc }}</p>
-      </div>
-
-      <div class="ysg-stack-row" style="display:flex;gap:20px;align-items:center;padding:14px 0;">
-        <div class="ysg-stack-col" style="width:198px;flex-shrink:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s;" style-hover="animation:ysgCardJiggle .5s ease-out forwards;box-shadow:0 12px 28px -10px rgba(18,22,31,.35);">
-          <div style="padding:10px 16px;background:var(--surface);text-align:center;"><h3 style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0;color:var(--fg);">{{ job8Title }}</h3></div>
-          <img src="uploads/Cloud.png" alt="Cloud" style="width:100%;height:121px;display:block;object-fit:cover;">
-        </div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg-muted);margin:0;flex:1;min-width:0;">{{ job8Desc }}</p>
-      </div>
-
-      <div class="ysg-stack-row" style="display:flex;gap:20px;align-items:center;padding:14px 0;">
-        <div class="ysg-stack-col" style="width:198px;flex-shrink:0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s;" style-hover="animation:ysgCardJiggle .5s ease-out forwards;box-shadow:0 12px 28px -10px rgba(18,22,31,.35);">
-          <div style="padding:10px 16px;background:var(--surface);text-align:center;"><h3 style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;letter-spacing:-.01em;margin:0;color:var(--fg);">{{ job9Title }}</h3></div>
-          <img src="uploads/Cust-e645ce4f.png" alt="Customer Service" style="width:100%;height:121px;display:block;object-fit:cover;">
-        </div>
-        <p style="font-size:15px;line-height:1.7;color:var(--fg-muted);margin:0;flex:1;min-width:0;">{{ job9Desc }}</p>
-      </div>
-
-    </div>
-  </div></section>
 
   <!-- FOOTER -->
   <footer style="border-top:1px solid var(--border);">
@@ -254,13 +180,13 @@
         <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">{{ allRightsReserved }}</span>
         <span class="ysg-footer-office-full" style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;">{{ footerRegOffice }}</span>
         <span class="ysg-footer-office-short" style="display:none;font-size:12.5px;color:var(--fg-dim);line-height:1.25;">{{ footerRegOfficeShort }}</span>
-        <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> <a href="tel:+916302840055" style="color:inherit;" style-hover="color:var(--accent)">+91 630 284 0055</a>&nbsp; |&nbsp; <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><path d="M22 6l-10 7L2 6"></path></svg> <a href="mailto:contact@yoursupportgenie.com" style="color:inherit;" style-hover="color:var(--accent)">contact@yoursupportgenie.com</a></span>
+        <span style="font-size:12.5px;color:var(--fg-dim);line-height:1.25;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><rect x="6" y="2" width="12" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg> <a href="tel:+916302840055" style="color:inherit;" style-hover="color:var(--accent)">+91 630 284 0055</a>&nbsp; |&nbsp; <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;display:inline-block;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><path d="M22 6l-10 7L2 6"></path></svg> <a href="mailto:contact@yoursupportgenie.com" style="color:inherit;" style-hover="color:var(--accent)">contact@yoursupportgenie.com</a></span>
       </div>
       <div class="ysg-footer-desktop-links" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <a href="/" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navHome }}</a>
-        <a href="index.html#services" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navServices }}</a>
-        <a href="training.html" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navTraining }}</a>
-        <a href="careers.html" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navCareers }}</a>
+        <a href="../index.html#services" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navServices }}</a>
+        <a href="../training.html" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navTraining }}</a>
+        <a href="../careers.html" style="font-size:12.5px;color:var(--fg-dim);transition:color .15s;" style-hover="color:var(--fg)">{{ navCareers }}</a>
       </div>
       <div class="ysg-footer-desktop-links" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <button onclick="{{ openTos }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;transition:color .15s;" style-hover="color:var(--fg)">{{ docLabelTos }}</button>
@@ -277,15 +203,15 @@
       <div class="ysg-footer-mobile-links" style="display:none;">
         <a href="/" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navHome }}</a>
         <button onclick="{{ openTos }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelTos }}</button>
-        <a href="index.html#services" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navServices }}</a>
+        <a href="../index.html#services" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navServices }}</a>
         <button onclick="{{ openPrivacy }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelPrivacy }}</button>
-        <a href="training.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navTraining }}</a>
+        <a href="../training.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navTraining }}</a>
         <button onclick="{{ openCompliance }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelCompliance }}</button>
-        <a href="careers.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navCareers }}</a>
+        <a href="../careers.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navCareers }}</a>
         <button onclick="{{ openAgreements }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelAgreements }}</button>
-        <a href="news.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navNews }}</a>
+        <a href="../news.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navNews }}</a>
         <button onclick="{{ openCookie }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelCookie }}</button>
-        <a href="about.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navAbout }}</a>
+        <a href="../about.html" style="font-size:12.5px;color:var(--fg-dim);text-decoration:none;" style-hover="color:var(--fg)">{{ navAbout }}</a>
         <button onclick="{{ openDisclaimer }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelDisclaimer }}</button>
         <button onclick="{{ openDns }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelDns }}</button>
         <button onclick="{{ openDatasec }}" style="background:none;border:none;padding:0;font-family:inherit;font-size:12.5px;color:var(--fg-dim);cursor:pointer;text-align:left;" style-hover="color:var(--fg)">{{ docLabelDatasec }}</button>
@@ -359,22 +285,9 @@
 const I18N = {
   en: {
     navHome:'Home', navServices:'Services & Support', navTraining:'Training', navCareers:'Careers', navNews:'News', navAbout:'About', navContact:'Contact',
-    whyHeading:'Why Work at YSG?',
-    whyP1:"YSG is a young, fast-moving company — small enough that your work is visible from day one, and ambitious enough that you'll be handed real client problems, not busywork. We keep hierarchy light: good ideas travel fast regardless of title, and everyone here has a direct hand in shaping how we deliver IT services.",
-    whyP2:"We offer flexible, remote-friendly work options built around outcomes rather than hours in a chair — what matters is that clients are supported and problems get solved, not where you're sitting when you do it.",
-    whyP3:"If you're new to the industry, YSG is a genuine springboard: you'll rotate across service desk, cloud, security, networking, and data work, build a broad technical foundation, and pick up certifications along the way — all with direct mentorship from people who've done the job.",
-    careersHeading:'Careers at YSG',
-    careersIntroPre:'We work in the following areas, but are not limited to them. Want to work with us in the future?',
-    submitResumeLabel:'Submit Resume',
-    job1Title:'IT Service Desk', job1Desc:'Responsible for being the first point of contact — logging tickets, triaging incidents, and resolving common issues such as password resets, access requests, and basic hardware/software troubleshooting within SLA. Handle escalations that need deeper OS and application fixes, endpoint configuration, and coordination with specialist teams, while keeping documentation and the knowledge base current. Track recurring issues to spot patterns worth fixing at the root, and help onboard new hires on tools and process. Communicate clearly with end users throughout, so every ticket feels handled, not just closed.',
-    job2Title:'Enterprise SaaS', job2Desc:'Handle day-to-day user questions on the SaaS tools clients rely on — account setup, permissions, basic configuration, and known-issue fixes. Run integration troubleshooting, data sync fixes, and vendor escalations, and help onboard new clients onto their SaaS stack, building product expertise across multiple platforms. Document common fixes and share them with the wider support team to speed up future tickets. Stay current on platform updates and release notes so clients hear about changes before they cause confusion.',
-    job3Title:'Cybersecurity', job3Desc:'Monitor security alerts, run routine vulnerability scans, and follow playbooks to contain common threats such as phishing, malware alerts, and suspicious logins. Investigate confirmed incidents, tune detection rules, and lead client-facing security assessments and audit prep. Keep clients informed with clear, non-technical updates during active incidents and post-incident reviews. Contribute to the playbooks that make the next response faster and more consistent across the team.',
-    job4Title:'Network', job4Desc:'Monitor connectivity and uptime, handle basic router/switch/Wi-Fi troubleshooting, and escalate outages per runbook. Build and configure client networks, manage firewalls and VPNs, and lead root-cause analysis on recurring issues — hands-on infrastructure work that builds toward certifications like CCNA and beyond. Maintain accurate network diagrams and documentation as environments change. Plan upgrades and changes around client business hours to minimize disruption and keep everything auditable end to end.',
-    job5Title:'Database', job5Desc:'Run routine health checks, backups, and simple query or access requests, keeping an eye out for performance alerts. Maintain query and index tuning, schema changes, and own backup/recovery strategy and data integrity across client environments. Plan capacity ahead of client growth and test recovery procedures regularly. Review slow queries and storage trends proactively, so performance issues get caught long before clients ever notice them.',
-    job6Title:'Data Analytics', job6Desc:'Build and maintain standard reports and dashboards, clean incoming data, and answer routine ad-hoc requests from clients. Run predictive and exploratory analysis on new data models, partnering directly with clients to turn their data into decisions. Present findings in plain language so non-technical stakeholders can act on them confidently. Validate data quality upstream so every report and model clients see can be trusted at a glance.',
-    job7Title:'AI & Automation', job7Desc:'Maintain existing automations and scripts, monitor scheduled jobs, and handle first-line fixes when a workflow breaks. Build new automations and AI-assisted workflows from scratch, integrate them into client systems, and measure the time and cost they save. Continuously test and refine workflows as client processes and tools evolve. Keep a clear audit trail for every automation, so its logic stays understandable to the whole team over time.',
-    job8Title:'Cloud', job8Desc:'Handle routine provisioning, user/license management, and monitoring across Azure, AWS, and Microsoft 365. Own architecture decisions, cost optimization, migrations, and security hardening of client cloud environments. Track spend against budget monthly and recommend right-sizing where it saves clients money. Stay ahead of provider changes and new services, bringing relevant options to clients before they have to ask.',
-    job9Title:'Customer Service', job9Desc:'Respond to client questions and requests across phone, email, and chat, keeping response times fast and tone consistently helpful. Own escalations that need coordination across teams, manage client relationships day-to-day, and turn feedback into process improvements. Track satisfaction trends and flag recurring pain points before they become churn risks. Build the templates and playbooks that keep every interaction feeling personal, not scripted.',
+    aboutHeading:'About YSG',
+    aboutP1:"Your Support Genie (YSG) was founded to help start-ups, micro, and small businesses address the technology challenges that come with growth by delivering dependable IT, cybersecurity, and cloud services tailored to their needs. Our goal is to become a trusted technology partner that keeps systems secure, reliable, and efficient, allowing business owners to focus on running and growing their business with confidence. Our vision is to make quality IT accessible to every business, regardless of size, delivered through responsive support, practical solutions, and clear, honest advice.",
+    aboutP2:"YSG is built on an entrepreneur's drive and years of hands-on technical support experience gained by solving real business challenges. That experience shapes our approach—practical, accountable, and focused on building long-term relationships through dependable service, proactive guidance, and technology solutions that grow alongside our clients and partners. We also partner with established MSPs to extend capacity and deliver successful outcomes for shared clients.",
     docLabels:{ tos:'Terms of Service', privacy:'Privacy Policy', compliance:'Compliance', agreements:'Agreements', cookie:'Cookie settings', disclaimer:'Disclaimer', datasec:'Data Security', dns:'FAQ' },
     footerRegistered:'(Registered under the Companies Act, 2013)', footerRegOffice:'Registered Office: Bangalore - 560043, Karnataka, India', footerRegOfficeShort:'Office: Bangalore - 560043, Karnataka, India',
     footerContactLabel:'Contact:', footerPhoneWord:'Phone:', footerEmailWord:'Email:', allRightsReserved:'All Rights Reserved.',
@@ -439,22 +352,9 @@ const I18N = {
   },
   es: {
     navHome:'Inicio', navServices:'Servicios y Soporte', navTraining:'Formación', navCareers:'Empleo', navNews:'Noticias', navAbout:'Nosotros', navContact:'Contacto',
-    whyHeading:'¿Por Qué Trabajar en YSG?',
-    whyP1:'YSG es una empresa joven y dinámica — lo bastante pequeña como para que su trabajo sea visible desde el primer día, y lo bastante ambiciosa como para confiarle problemas reales de clientes, no tareas rutinarias. Mantenemos una jerarquía ligera: las buenas ideas avanzan rápido sin importar el cargo, y todos aquí tienen una participación directa en cómo prestamos nuestros servicios de TI.',
-    whyP2:'Ofrecemos opciones de trabajo flexibles y compatibles con el teletrabajo, centradas en resultados y no en horas de oficina — lo que importa es que los clientes reciban soporte y los problemas se resuelvan, no desde dónde lo haga.',
-    whyP3:'Si es nuevo en el sector, YSG es un verdadero trampolín: rotará entre mesa de ayuda, nube, seguridad, redes y datos, construirá una base técnica amplia e irá obteniendo certificaciones en el camino — todo con mentoría directa de quienes ya han hecho el trabajo.',
-    careersHeading:'Empleo en YSG',
-    careersIntroPre:'Trabajamos en las siguientes áreas, aunque no nos limitamos a ellas. ¿Le interesaría trabajar con nosotros en el futuro?',
-    submitResumeLabel:'Enviar Currículum',
-    job1Title:'Mesa de Ayuda de TI', job1Desc:'Responsable de ser el primer punto de contacto — registrando tickets, clasificando incidencias y resolviendo problemas comunes como restablecimiento de contraseñas, solicitudes de acceso y solución básica de hardware/software dentro del SLA. Gestiona escalamientos que requieren correcciones más profundas de sistema operativo y aplicaciones, configuración de endpoints y coordinación con equipos especializados, manteniendo actualizada la documentación y la base de conocimiento. Hace seguimiento de incidencias recurrentes para detectar patrones que valga la pena corregir de raíz, y ayuda a incorporar a nuevos empleados en herramientas y procesos. Se comunica con claridad con los usuarios finales en todo momento, para que cada ticket se sienta atendido, no solo cerrado.',
-    job2Title:'Enterprise SaaS', job2Desc:'Atiende las consultas diarias de los usuarios sobre las herramientas SaaS que utilizan los clientes — configuración de cuentas, permisos, ajustes básicos y solución de problemas conocidos. Realiza solución de problemas de integración, correcciones de sincronización de datos y escalamientos con proveedores, y ayuda a incorporar nuevos clientes a su conjunto de herramientas SaaS, desarrollando experiencia en múltiples plataformas. Documenta las soluciones comunes y las comparte con el resto del equipo de soporte para agilizar futuros tickets. Se mantiene al día con las actualizaciones de plataforma y notas de versión para que los clientes conozcan los cambios antes de que generen confusión.',
-    job3Title:'Ciberseguridad', job3Desc:'Supervisa alertas de seguridad, realiza análisis de vulnerabilidades rutinarios y sigue protocolos para contener amenazas comunes como phishing, alertas de malware e inicios de sesión sospechosos. Investiga incidentes confirmados, ajusta reglas de detección y lidera evaluaciones de seguridad y preparación de auditorías de cara al cliente. Mantiene informados a los clientes con actualizaciones claras y no técnicas durante incidentes activos y revisiones posteriores. Contribuye a los protocolos que hacen que la próxima respuesta sea más rápida y coherente en todo el equipo.',
-    job4Title:'Red', job4Desc:'Supervisa la conectividad y el tiempo de actividad, gestiona la solución básica de problemas de routers/switches/Wi-Fi y escala interrupciones según el manual de procedimientos. Construye y configura redes de clientes, gestiona firewalls y VPN, y lidera el análisis de causa raíz en incidencias recurrentes — trabajo práctico de infraestructura que construye hacia certificaciones como CCNA y más allá. Mantiene diagramas de red y documentación precisos a medida que cambian los entornos. Planifica actualizaciones y cambios según el horario laboral del cliente para minimizar interrupciones y mantener todo auditable de principio a fin.',
-    job5Title:'Base de Datos', job5Desc:'Realiza controles de estado rutinarios, copias de seguridad y solicitudes simples de consulta o acceso, atento a alertas de rendimiento. Mantiene el ajuste de consultas e índices, cambios de esquema, y es responsable de la estrategia de copia de seguridad/recuperación y la integridad de los datos en los entornos de los clientes. Planifica la capacidad con antelación al crecimiento del cliente y prueba los procedimientos de recuperación con regularidad. Revisa proactivamente las consultas lentas y las tendencias de almacenamiento, para detectar problemas de rendimiento mucho antes de que los clientes los noten.',
-    job6Title:'Análisis de Datos', job6Desc:'Crea y mantiene informes y paneles estándar, depura los datos entrantes y responde a solicitudes ad-hoc rutinarias de los clientes. Realiza análisis predictivo y exploratorio sobre nuevos modelos de datos, colaborando directamente con los clientes para convertir sus datos en decisiones. Presenta los hallazgos en lenguaje sencillo para que las partes interesadas no técnicas puedan actuar con confianza. Valida la calidad de los datos en origen para que cada informe y modelo que ven los clientes sea confiable de un vistazo.',
-    job7Title:'IA y Automatización', job7Desc:'Mantiene las automatizaciones y scripts existentes, supervisa los trabajos programados y realiza las primeras correcciones cuando un flujo de trabajo falla. Crea nuevas automatizaciones y flujos de trabajo asistidos por IA desde cero, los integra en los sistemas del cliente y mide el tiempo y costo que ahorran. Prueba y perfecciona continuamente los flujos de trabajo a medida que evolucionan los procesos y herramientas del cliente. Mantiene un registro de auditoría claro para cada automatización, de modo que su lógica siga siendo comprensible para todo el equipo con el tiempo.',
-    job8Title:'Nube', job8Desc:'Gestiona el aprovisionamiento rutinario, la administración de usuarios/licencias y el monitoreo en Azure, AWS y Microsoft 365. Es responsable de las decisiones de arquitectura, la optimización de costos, las migraciones y el endurecimiento de la seguridad de los entornos en la nube del cliente. Hace seguimiento del gasto frente al presupuesto mensualmente y recomienda ajustes de tamaño cuando ello ahorra dinero al cliente. Se mantiene al tanto de los cambios de los proveedores y los nuevos servicios, presentando opciones relevantes a los clientes antes de que tengan que preguntar.',
-    job9Title:'Servicio al Cliente', job9Desc:'Responde a las preguntas y solicitudes de los clientes por teléfono, correo electrónico y chat, manteniendo tiempos de respuesta rápidos y un tono siempre servicial. Es responsable de los escalamientos que requieren coordinación entre equipos, gestiona las relaciones con los clientes en el día a día y convierte los comentarios en mejoras de procesos. Hace seguimiento de las tendencias de satisfacción y señala los puntos débiles recurrentes antes de que se conviertan en riesgo de pérdida de clientes. Crea las plantillas y protocolos que hacen que cada interacción se sienta personal, no guionada.',
+    aboutHeading:'Sobre YSG',
+    aboutP1:'Your Support Genie (YSG) se fundó para ayudar a startups, micro y pequeñas empresas a abordar los desafíos tecnológicos que surgen con el crecimiento, ofreciendo servicios confiables de TI, ciberseguridad y nube adaptados a sus necesidades. Nuestro objetivo es convertirnos en un socio tecnológico de confianza que mantenga los sistemas seguros, fiables y eficientes, permitiendo a los propietarios de negocios centrarse en dirigir y hacer crecer su empresa con confianza. Nuestra visión es hacer que la TI de calidad sea accesible para cualquier empresa, sin importar su tamaño, mediante soporte receptivo, soluciones prácticas y asesoramiento claro y honesto.',
+    aboutP2:'YSG se construye sobre el impulso emprendedor y años de experiencia práctica en soporte técnico, adquirida resolviendo desafíos empresariales reales. Esa experiencia da forma a nuestro enfoque: práctico, responsable y centrado en construir relaciones a largo plazo mediante un servicio fiable, orientación proactiva y soluciones tecnológicas que crecen junto con nuestros clientes y socios. También colaboramos con proveedores MSP consolidados para ampliar nuestra capacidad y ofrecer resultados exitosos a los clientes compartidos.',
     docLabels:{ tos:'Términos del Servicio', privacy:'Política de Privacidad', compliance:'Cumplimiento', agreements:'Acuerdos', cookie:'Preferencias de cookies', disclaimer:'Aviso Legal', datasec:'Seguridad de Datos', dns:'Preguntas Frecuentes' },
     footerRegistered:'(Inscrita conforme a la Ley de Sociedades de 2013)', footerRegOffice:'Domicilio social: Bangalore - 560043, Karnataka, India', footerRegOfficeShort:'Oficina: Bangalore - 560043, Karnataka, India',
     footerContactLabel:'Contacto:', footerPhoneWord:'Teléfono:', footerEmailWord:'Correo electrónico:', allRightsReserved:'Todos los derechos reservados.',
@@ -519,22 +419,9 @@ const I18N = {
   },
   de: {
     navHome:'Startseite', navServices:'Services & Support', navTraining:'Schulungen', navCareers:'Karriere', navNews:'Neuigkeiten', navAbout:'Über uns', navContact:'Kontakt',
-    whyHeading:'Warum bei YSG arbeiten?',
-    whyP1:'YSG ist ein junges, schnell wachsendes Unternehmen — klein genug, dass Ihre Arbeit von Anfang an sichtbar ist, und ambitioniert genug, dass Ihnen echte Kundenprobleme anvertraut werden, keine Routinearbeit. Wir halten Hierarchien flach: gute Ideen setzen sich schnell durch, unabhängig vom Titel, und jeder hier hat direkten Einfluss darauf, wie wir IT-Services erbringen.',
-    whyP2:'Wir bieten flexible, remote-freundliche Arbeitsmodelle, die sich an Ergebnissen statt an Bürostunden orientieren — entscheidend ist, dass Kunden betreut und Probleme gelöst werden, nicht von wo aus Sie das tun.',
-    whyP3:'Wenn Sie neu in der Branche sind, ist YSG ein echtes Sprungbrett: Sie durchlaufen Service-Desk, Cloud, Sicherheit, Netzwerke und Datenarbeit, bauen ein breites technisches Fundament auf und erwerben dabei Zertifizierungen — mit direktem Mentoring von Menschen, die den Job bereits gemacht haben.',
-    careersHeading:'Karriere bei YSG',
-    careersIntroPre:'Wir arbeiten in den folgenden Bereichen, sind aber nicht darauf beschränkt. Möchten Sie in Zukunft mit uns arbeiten?',
-    submitResumeLabel:'Lebenslauf einreichen',
-    job1Title:'IT-Service-Desk', job1Desc:'Verantwortlich als erste Anlaufstelle — Erfassen von Tickets, Priorisieren von Vorfällen und Lösen häufiger Probleme wie Passwort-Rücksetzungen, Zugriffsanfragen und grundlegende Hardware-/Software-Fehlerbehebung innerhalb des SLA. Bearbeitet Eskalationen, die tiefergehende Betriebssystem- und Anwendungsfixes, Endpoint-Konfiguration und Abstimmung mit Fachteams erfordern, und hält Dokumentation und Wissensdatenbank aktuell. Verfolgt wiederkehrende Probleme, um Muster zu erkennen, die eine grundlegende Lösung wert sind, und hilft neuen Mitarbeitern beim Einstieg in Tools und Prozesse. Kommuniziert durchgehend klar mit Endnutzern, damit sich jedes Ticket betreut anfühlt, nicht nur geschlossen.',
-    job2Title:'Enterprise SaaS', job2Desc:'Bearbeitet tägliche Nutzeranfragen zu den SaaS-Tools, auf die sich Kunden verlassen — Kontoeinrichtung, Berechtigungen, Grundkonfiguration und bekannte Problemlösungen. Führt Integrationsfehlerbehebung, Datensynchronisationsfixes und Anbieter-Eskalationen durch und hilft, neue Kunden in ihren SaaS-Stack einzuführen, wobei Produktexpertise über mehrere Plattformen hinweg aufgebaut wird. Dokumentiert häufige Lösungen und teilt sie mit dem breiteren Support-Team, um künftige Tickets zu beschleunigen. Bleibt über Plattform-Updates und Release-Notes informiert, damit Kunden von Änderungen erfahren, bevor sie Verwirrung stiften.',
-    job3Title:'Cybersicherheit', job3Desc:'Überwacht Sicherheitswarnungen, führt routinemäßige Schwachstellen-Scans durch und folgt Playbooks, um häufige Bedrohungen wie Phishing, Malware-Warnungen und verdächtige Anmeldungen einzudämmen. Untersucht bestätigte Vorfälle, optimiert Erkennungsregeln und leitet kundenseitige Sicherheitsbewertungen und Audit-Vorbereitungen. Hält Kunden mit klaren, nicht-technischen Updates während aktiver Vorfälle und Nachbesprechungen informiert. Trägt zu den Playbooks bei, die die nächste Reaktion schneller und im gesamten Team einheitlicher machen.',
-    job4Title:'Netzwerk', job4Desc:'Überwacht Konnektivität und Verfügbarkeit, behebt grundlegende Router-/Switch-/WLAN-Probleme und eskaliert Ausfälle gemäß Runbook. Baut und konfiguriert Kundennetzwerke, verwaltet Firewalls und VPNs und leitet die Ursachenanalyse bei wiederkehrenden Problemen — praktische Infrastrukturarbeit, die auf Zertifizierungen wie CCNA und darüber hinaus hinarbeitet. Pflegt präzise Netzwerkdiagramme und Dokumentation bei sich ändernden Umgebungen. Plant Upgrades und Änderungen rund um die Geschäftszeiten der Kunden, um Störungen zu minimieren und alles durchgängig prüfbar zu halten.',
-    job5Title:'Datenbank', job5Desc:'Führt routinemäßige Zustandsprüfungen, Backups und einfache Abfrage- oder Zugriffsanfragen durch und achtet auf Leistungswarnungen. Pflegt Abfrage- und Indexoptimierung, Schemaänderungen und verantwortet Backup-/Wiederherstellungsstrategie sowie Datenintegrität in Kundenumgebungen. Plant Kapazitäten vorausschauend zum Kundenwachstum und testet Wiederherstellungsverfahren regelmäßig. Überprüft proaktiv langsame Abfragen und Speichertrends, damit Leistungsprobleme lange bevor Kunden sie bemerken erkannt werden.',
-    job6Title:'Datenanalyse', job6Desc:'Erstellt und pflegt Standardberichte und Dashboards, bereinigt eingehende Daten und beantwortet routinemäßige Ad-hoc-Anfragen von Kunden. Führt prädiktive und explorative Analysen zu neuen Datenmodellen durch und arbeitet direkt mit Kunden zusammen, um deren Daten in Entscheidungen umzuwandeln. Präsentiert Erkenntnisse in verständlicher Sprache, damit nicht-technische Stakeholder sicher handeln können. Validiert die Datenqualität vorgelagert, damit jeder Bericht und jedes Modell, das Kunden sehen, auf den ersten Blick vertrauenswürdig ist.',
-    job7Title:'KI & Automatisierung', job7Desc:'Pflegt bestehende Automatisierungen und Skripte, überwacht geplante Jobs und behebt Erstlinienprobleme, wenn ein Workflow ausfällt. Baut neue Automatisierungen und KI-gestützte Workflows von Grund auf, integriert sie in Kundensysteme und misst die eingesparte Zeit und Kosten. Testet und verfeinert Workflows kontinuierlich, während sich Kundenprozesse und -tools weiterentwickeln. Hält für jede Automatisierung einen klaren Prüfpfad, damit ihre Logik für das gesamte Team langfristig nachvollziehbar bleibt.',
-    job8Title:'Cloud', job8Desc:'Übernimmt routinemäßige Bereitstellung, Benutzer-/Lizenzverwaltung und Überwachung in Azure, AWS und Microsoft 365. Verantwortet Architekturentscheidungen, Kostenoptimierung, Migrationen und Sicherheitshärtung von Kunden-Cloud-Umgebungen. Verfolgt monatlich die Ausgaben gegenüber dem Budget und empfiehlt Anpassungen, wo dies Kunden Geld spart. Bleibt Anbieteränderungen und neuen Services voraus und bringt relevante Optionen zu Kunden, bevor diese danach fragen müssen.',
-    job9Title:'Kundenservice', job9Desc:'Beantwortet Kundenfragen und -anfragen über Telefon, E-Mail und Chat und hält Reaktionszeiten schnell sowie den Ton stets hilfsbereit. Verantwortet Eskalationen, die teamübergreifende Koordination erfordern, pflegt Kundenbeziehungen im Tagesgeschäft und verwandelt Feedback in Prozessverbesserungen. Verfolgt Zufriedenheitstrends und meldet wiederkehrende Schwachstellen, bevor sie zu Abwanderungsrisiken werden. Erstellt die Vorlagen und Playbooks, die jede Interaktion persönlich statt einstudiert wirken lassen.',
+    aboutHeading:'Über YSG',
+    aboutP1:'Your Support Genie (YSG) wurde gegründet, um Start-ups, Kleinst- und kleinen Unternehmen zu helfen, die mit Wachstum einhergehenden technologischen Herausforderungen zu bewältigen, indem zuverlässige IT-, Cybersicherheits- und Cloud-Services angeboten werden, die auf ihre Bedürfnisse zugeschnitten sind. Unser Ziel ist es, ein vertrauenswürdiger Technologiepartner zu werden, der Systeme sicher, zuverlässig und effizient hält, damit sich Unternehmer mit Zuversicht auf die Führung und das Wachstum ihres Geschäfts konzentrieren können. Unsere Vision ist es, hochwertige IT für jedes Unternehmen zugänglich zu machen, unabhängig von der Größe, durch reaktionsschnellen Support, praktische Lösungen und klare, ehrliche Beratung.',
+    aboutP2:'YSG basiert auf unternehmerischem Antrieb und jahrelanger praktischer Erfahrung im technischen Support, die durch die Lösung realer Geschäftsprobleme gewonnen wurde. Diese Erfahrung prägt unseren Ansatz — praktisch, verantwortungsbewusst und darauf ausgerichtet, langfristige Beziehungen durch zuverlässigen Service, proaktive Beratung und Technologielösungen aufzubauen, die mit unseren Kunden und Partnern mitwachsen. Wir arbeiten außerdem mit etablierten MSPs zusammen, um Kapazitäten zu erweitern und erfolgreiche Ergebnisse für gemeinsame Kunden zu liefern.',
     docLabels:{ tos:'Nutzungsbedingungen', privacy:'Datenschutzerklärung', compliance:'Compliance', agreements:'Vereinbarungen', cookie:'Cookie-Einstellungen', disclaimer:'Haftungsausschluss', datasec:'Datensicherheit', dns:'FAQ' },
     footerRegistered:'(Eingetragen nach dem Companies Act, 2013)', footerRegOffice:'Eingetragener Sitz: Bangalore - 560043, Karnataka, Indien', footerRegOfficeShort:'Büro: Bangalore - 560043, Karnataka, Indien',
     footerContactLabel:'Kontakt:', footerPhoneWord:'Telefon:', footerEmailWord:'E-Mail:', allRightsReserved:'Alle Rechte vorbehalten.',
@@ -599,22 +486,9 @@ const I18N = {
   },
   pt: {
     navHome:'Início', navServices:'Serviços e Suporte', navTraining:'Formação', navCareers:'Carreiras', navNews:'Notícias', navAbout:'Sobre nós', navContact:'Contacto',
-    whyHeading:'Porque Trabalhar na YSG?',
-    whyP1:'A YSG é uma empresa jovem e dinâmica — suficientemente pequena para que o seu trabalho seja visível desde o primeiro dia, e suficientemente ambiciosa para lhe confiar problemas reais de clientes, não tarefas rotineiras. Mantemos a hierarquia leve: as boas ideias avançam depressa independentemente do cargo, e todos aqui têm uma participação direta na forma como prestamos os nossos serviços de TI.',
-    whyP2:'Oferecemos opções de trabalho flexíveis e compatíveis com trabalho remoto, orientadas para resultados em vez de horas de secretária — o que importa é que os clientes sejam apoiados e os problemas resolvidos, não o local de onde o faz.',
-    whyP3:'Se é novo no setor, a YSG é um verdadeiro trampolim: vai rodar entre help desk, cloud, segurança, redes e dados, construir uma base técnica ampla e obter certificações pelo caminho — tudo com mentoria direta de quem já fez o trabalho.',
-    careersHeading:'Carreiras na YSG',
-    careersIntroPre:'Trabalhamos nas seguintes áreas, mas não estamos limitados a elas. Gostaria de trabalhar connosco no futuro?',
-    submitResumeLabel:'Enviar Currículo',
-    job1Title:'Help Desk de TI', job1Desc:'Responsável por ser o primeiro ponto de contacto — registando tickets, triando incidentes e resolvendo problemas comuns como redefinições de palavra-passe, pedidos de acesso e resolução básica de problemas de hardware/software dentro do SLA. Trata escalonamentos que exigem correções mais profundas do sistema operativo e das aplicações, configuração de endpoints e coordenação com equipas especializadas, mantendo a documentação e a base de conhecimento atualizadas. Acompanha problemas recorrentes para identificar padrões que valha a pena corrigir na origem, e ajuda a integrar novos colaboradores em ferramentas e processos. Comunica claramente com os utilizadores finais em todo o processo, para que cada ticket pareça tratado, não apenas fechado.',
-    job2Title:'Enterprise SaaS', job2Desc:'Trata das questões diárias dos utilizadores sobre as ferramentas SaaS em que os clientes confiam — configuração de contas, permissões, configuração básica e correção de problemas conhecidos. Realiza resolução de problemas de integração, correções de sincronização de dados e escalonamentos com fornecedores, e ajuda a integrar novos clientes na sua stack SaaS, desenvolvendo conhecimento de produto em várias plataformas. Documenta correções comuns e partilha-as com a restante equipa de suporte para agilizar futuros tickets. Mantém-se atualizado sobre atualizações da plataforma e notas de lançamento para que os clientes saibam das alterações antes de causarem confusão.',
-    job3Title:'Cibersegurança', job3Desc:'Monitoriza alertas de segurança, realiza verificações de vulnerabilidades de rotina e segue manuais de procedimentos para conter ameaças comuns como phishing, alertas de malware e inícios de sessão suspeitos. Investiga incidentes confirmados, ajusta regras de deteção e lidera avaliações de segurança e preparação de auditorias junto do cliente. Mantém os clientes informados com atualizações claras e não técnicas durante incidentes ativos e revisões pós-incidente. Contribui para os manuais que tornam a próxima resposta mais rápida e consistente em toda a equipa.',
-    job4Title:'Rede', job4Desc:'Monitoriza a conetividade e o tempo de atividade, trata da resolução básica de problemas de routers/switches/Wi-Fi e escala interrupções conforme o manual de procedimentos. Constrói e configura redes de clientes, gere firewalls e VPNs, e lidera a análise de causa raiz em problemas recorrentes — trabalho prático de infraestrutura que constrói para certificações como CCNA e além. Mantém diagramas de rede e documentação precisos à medida que os ambientes mudam. Planeia atualizações e alterações em torno do horário comercial do cliente para minimizar interrupções e manter tudo auditável de ponta a ponta.',
-    job5Title:'Base de Dados', job5Desc:'Realiza verificações de estado de rotina, cópias de segurança e pedidos simples de consulta ou acesso, atento a alertas de desempenho. Mantém a otimização de consultas e índices, alterações de esquema, e é responsável pela estratégia de cópia de segurança/recuperação e integridade dos dados nos ambientes dos clientes. Planeia capacidade antecipadamente ao crescimento do cliente e testa procedimentos de recuperação regularmente. Revê proativamente consultas lentas e tendências de armazenamento, para que problemas de desempenho sejam detetados muito antes de os clientes os notarem.',
-    job6Title:'Análise de Dados', job6Desc:'Cria e mantém relatórios e painéis padrão, limpa dados recebidos e responde a pedidos ad-hoc rotineiros dos clientes. Realiza análise preditiva e exploratória sobre novos modelos de dados, colaborando diretamente com os clientes para transformar os seus dados em decisões. Apresenta conclusões em linguagem simples para que as partes interessadas não técnicas possam agir com confiança. Valida a qualidade dos dados a montante para que cada relatório e modelo que os clientes veem seja fiável à primeira vista.',
-    job7Title:'IA e Automação', job7Desc:'Mantém automações e scripts existentes, monitoriza tarefas agendadas e trata correções de primeira linha quando um fluxo de trabalho falha. Cria novas automações e fluxos de trabalho assistidos por IA de raiz, integra-os nos sistemas dos clientes e mede o tempo e custo que poupam. Testa e aperfeiçoa continuamente os fluxos de trabalho à medida que os processos e ferramentas dos clientes evoluem. Mantém um registo de auditoria claro para cada automação, para que a sua lógica permaneça compreensível para toda a equipa ao longo do tempo.',
-    job8Title:'Cloud', job8Desc:'Trata do aprovisionamento de rotina, gestão de utilizadores/licenças e monitorização no Azure, AWS e Microsoft 365. É responsável por decisões de arquitetura, otimização de custos, migrações e reforço de segurança dos ambientes cloud dos clientes. Acompanha mensalmente as despesas face ao orçamento e recomenda ajustes de dimensionamento sempre que isso poupe dinheiro ao cliente. Mantém-se a par das alterações dos fornecedores e novos serviços, apresentando opções relevantes aos clientes antes de estes terem de perguntar.',
-    job9Title:'Serviço ao Cliente', job9Desc:'Responde a questões e pedidos de clientes por telefone, e-mail e chat, mantendo tempos de resposta rápidos e um tom sempre prestável. É responsável por escalonamentos que exigem coordenação entre equipas, gere relações com clientes no dia a dia e transforma feedback em melhorias de processo. Acompanha tendências de satisfação e sinaliza pontos fracos recorrentes antes de se tornarem riscos de perda de clientes. Cria os modelos e manuais que mantêm cada interação com um toque pessoal, não guionado.',
+    aboutHeading:'Sobre a YSG',
+    aboutP1:'A Your Support Genie (YSG) foi fundada para ajudar startups, micro e pequenas empresas a enfrentar os desafios tecnológicos que acompanham o crescimento, fornecendo serviços fiáveis de TI, cibersegurança e cloud adaptados às suas necessidades. O nosso objetivo é tornarmo-nos um parceiro tecnológico de confiança que mantém os sistemas seguros, fiáveis e eficientes, permitindo que os empresários se concentrem em gerir e fazer crescer o seu negócio com confiança. A nossa visão é tornar a TI de qualidade acessível a qualquer empresa, independentemente da dimensão, através de suporte reativo, soluções práticas e conselhos claros e honestos.',
+    aboutP2:'A YSG é construída sobre o espírito empreendedor e anos de experiência prática em suporte técnico, adquirida na resolução de desafios empresariais reais. Essa experiência molda a nossa abordagem — prática, responsável e focada na construção de relações de longo prazo através de um serviço fiável, orientação proativa e soluções tecnológicas que crescem junto com os nossos clientes e parceiros. Também trabalhamos com MSPs estabelecidos para ampliar a capacidade e entregar resultados bem-sucedidos para clientes partilhados.',
     docLabels:{ tos:'Termos de Serviço', privacy:'Política de Privacidade', compliance:'Conformidade', agreements:'Acordos', cookie:'Definições de cookies', disclaimer:'Aviso Legal', datasec:'Segurança de Dados', dns:'Perguntas Frequentes' },
     footerRegistered:'(Registada ao abrigo da Lei das Sociedades de 2013)', footerRegOffice:'Sede Registada: Bangalore - 560043, Karnataka, Índia', footerRegOfficeShort:'Escritório: Bangalore - 560043, Karnataka, Índia',
     footerContactLabel:'Contacto:', footerPhoneWord:'Telefone:', footerEmailWord:'E-mail:', allRightsReserved:'Todos os direitos reservados.',
@@ -747,11 +621,7 @@ class Component extends DCLogic {
         { label: 'PT', select: () => this.selectLang('pt') },
       ],
       navHome: L.navHome, navServices: L.navServices, navTraining: L.navTraining, navCareers: L.navCareers, navNews: L.navNews, navAbout: L.navAbout, navContact: L.navContact,
-      whyHeading: L.whyHeading, whyP1: L.whyP1, whyP2: L.whyP2, whyP3: L.whyP3,
-      careersHeading: L.careersHeading, careersIntroPre: L.careersIntroPre, submitResumeLabel: L.submitResumeLabel,
-      job1Title: L.job1Title, job1Desc: L.job1Desc, job2Title: L.job2Title, job2Desc: L.job2Desc, job3Title: L.job3Title, job3Desc: L.job3Desc,
-      job4Title: L.job4Title, job4Desc: L.job4Desc, job5Title: L.job5Title, job5Desc: L.job5Desc, job6Title: L.job6Title, job6Desc: L.job6Desc,
-      job7Title: L.job7Title, job7Desc: L.job7Desc, job8Title: L.job8Title, job8Desc: L.job8Desc, job9Title: L.job9Title, job9Desc: L.job9Desc,
+      aboutHeading: L.aboutHeading, aboutP1: L.aboutP1, aboutP2: L.aboutP2,
       footerRegistered: L.footerRegistered, footerRegOffice: L.footerRegOffice, footerRegOfficeShort: L.footerRegOfficeShort, footerContactLabel: L.footerContactLabel, footerPhoneWord: L.footerPhoneWord, footerEmailWord: L.footerEmailWord, allRightsReserved: L.allRightsReserved,
       docLabelTos: L.docLabels.tos, docLabelPrivacy: L.docLabels.privacy, docLabelCompliance: L.docLabels.compliance, docLabelAgreements: L.docLabels.agreements,
       docLabelCookie: L.docLabels.cookie, docLabelDisclaimer: L.docLabels.disclaimer, docLabelDatasec: L.docLabels.datasec, docLabelDns: L.docLabels.dns,
