@@ -85,13 +85,13 @@
     .ysg-navbar{padding:0 18px !important;}
     div[style*="max-width:1200px"]{padding-left:18px !important;padding-right:18px !important;}
     .ysg-about-grid{grid-template-columns:1fr !important;}
-    footer div[style*="justify-content:space-between"]{flex-direction:column;align-items:stretch !important;gap:20px !important;}
+    footer div[style*="justify-content:space-between"]{flex-direction:column;align-items:center !important;gap:20px !important;text-align:center;}
     .ysg-footer-desktop-links{display:none !important;}
-    .ysg-footer-mobile-links{display:grid !important;grid-template-columns:1fr 1fr;gap:8px 18px;}
-    .ysg-footer-company{gap:6px !important;}
+    .ysg-footer-mobile-links{display:grid !important;grid-template-columns:1fr 1fr;gap:8px 18px;justify-items:center;text-align:center;}
+    .ysg-footer-company{gap:6px !important;align-items:center !important;text-align:center;}
     .ysg-footer-office-full{display:none !important;}
     .ysg-footer-office-short{display:inline !important;}
-    .ysg-footer-contact{flex-direction:column;align-items:flex-start !important;gap:4px !important;}
+    .ysg-footer-contact{flex-direction:column;align-items:center !important;gap:4px !important;}
     .ysg-footer-sep{display:none !important;}
   }
 </style>
@@ -292,9 +292,10 @@ const I18N = {
         {heading:'Sharing & Sub-processors', text:'We share data only with vetted sub-processors (e.g. cloud and email providers) under confidentiality and data-protection terms. We do not sell your personal information.'},
         {heading:'Your Rights', text:'You may request access, correction, deletion, or a copy of your data, and may lodge a complaint with the relevant authority. Contact contact@yoursupportgenie.com to exercise these rights.'},
         {heading:'Retention', text:'We retain personal data only as long as needed for the purposes above or as required by law, after which it is securely deleted.'},
+        {heading:'Analytics', text:'We use Cloudflare Web Analytics, a privacy-friendly, cookieless service that measures aggregate site visits only — no personal data is collected through it. See our Cookies notice in the footer for details.'},
       ]},
       compliance:{ title:'Compliance', meta:'Governance & standards', intro:'YSG operates a managed IT practice aligned to recognized security and service-management frameworks, and complies with applicable Indian law.', sections:[
-        {heading:'Regulatory Compliance', text:'We comply with the Companies Act, 2013, the Information Technology Act, 2000, and the Digital Personal Data Protection Act, 2023, along with client-specific regulatory needs where contracted.'},
+        {heading:'Regulatory Compliance', text:'We comply with the Companies Act, 2013, the Information Technology Act, 2000, and the Digital Personal Data Protection Act, 2023, along with client-specific regulatory needs where contracted. For visitors in the European Union, we also align our data practices with the General Data Protection Regulation (GDPR).'},
         {heading:'Security Frameworks', text:'Our controls are aligned to ISO/IEC 27001 principles and SOC 2 trust criteria covering security, availability, and confidentiality.'},
         {heading:'Industry Alignment', text:'For clients in regulated sectors, we support compliance with frameworks such as PCI-DSS and HIPAA-equivalent safeguards through appropriate technical and organizational measures.'},
         {heading:'Audits & Reviews', text:'We conduct periodic internal reviews, vendor assessments, and access audits, and can support client or third-party audits under NDA.'},
@@ -318,6 +319,7 @@ const I18N = {
         {heading:'How do I get a quote?', text:'Reach out through the Contact form or email contact@yoursupportgenie.com with a short description of what you need \u2014 we\u2019ll follow up directly.'},
         {heading:'Is support remote or on-site?', text:'Primarily remote, which keeps costs down and response times fast. On-site visits can be arranged where needed.'},
         {heading:'What\u2019s your typical response time?', text:'We aim to respond to new enquiries within one business day.'},
+        {heading:'What happens to information I submit?', text:'Any details you share via our Contact form are handled under our Privacy Policy \u2014 see the Privacy Policy link in the footer for full details.'},
       ]},
       datasec:{ title:'Data Privacy and Security', meta:'How we protect your data', intro:'Security is core to our managed services. We apply layered technical and organizational controls to protect client and personal data.', sections:[
         {heading:'Encryption', text:'Data is encrypted in transit (TLS) and at rest using industry-standard algorithms across the systems we manage.'},
@@ -359,9 +361,10 @@ const I18N = {
         {heading:'Compartición y Subencargados', text:'Solo compartimos datos con subencargados verificados (p. ej., proveedores de nube y correo electrónico) bajo términos de confidencialidad y protección de datos. No vendemos su información personal.'},
         {heading:'Sus Derechos', text:'Puede solicitar acceso, corrección, eliminación o una copia de sus datos, y puede presentar una reclamación ante la autoridad correspondiente. Escriba a contact@yoursupportgenie.com para ejercer estos derechos.'},
         {heading:'Conservación', text:'Conservamos los datos personales solo durante el tiempo necesario para los fines anteriores o según lo exija la ley, tras lo cual se eliminan de forma segura.'},
+        {heading:'Analítica', text:'Utilizamos Cloudflare Web Analytics, un servicio de análisis respetuoso con la privacidad y sin cookies que solo mide visitas agregadas al sitio — no se recopilan datos personales a través de él. Consulte nuestro aviso de Cookies en el pie de página para más detalles.'},
       ]},
       compliance:{ title:'Cumplimiento', meta:'Gobernanza y estándares', intro:'YSG opera una práctica de TI gestionada alineada con marcos reconocidos de seguridad y gestión de servicios, y cumple con la legislación india aplicable.', sections:[
-        {heading:'Cumplimiento Normativo', text:'Cumplimos con la Ley de Sociedades de 2013, la Ley de Tecnología de la Información de 2000 y la Ley de Protección de Datos Personales Digitales de 2023, además de las necesidades regulatorias específicas de cada cliente cuando se contraten.'},
+        {heading:'Cumplimiento Normativo', text:'Cumplimos con la Ley de Sociedades de 2013, la Ley de Tecnología de la Información de 2000 y la Ley de Protección de Datos Personales Digitales de 2023, además de las necesidades regulatorias específicas de cada cliente cuando se contraten. Para visitantes de la Unión Europea, también alineamos nuestras prácticas de datos con el Reglamento General de Protección de Datos (RGPD).'},
         {heading:'Marcos de Seguridad', text:'Nuestros controles están alineados con los principios de ISO/IEC 27001 y los criterios de confianza de SOC 2, que abarcan seguridad, disponibilidad y confidencialidad.'},
         {heading:'Alineación Sectorial', text:'Para clientes en sectores regulados, apoyamos el cumplimiento de marcos como PCI-DSS y salvaguardas equivalentes a HIPAA mediante las medidas técnicas y organizativas adecuadas.'},
         {heading:'Auditorías y Revisiones', text:'Realizamos revisiones internas periódicas, evaluaciones de proveedores y auditorías de acceso, y podemos respaldar auditorías de clientes o de terceros bajo NDA.'},
@@ -385,6 +388,7 @@ const I18N = {
         {heading:'¿Cómo obtengo una cotización?', text:'Escríbanos a través del formulario de Contacto o al correo contact@yoursupportgenie.com con una breve descripción de lo que necesita; le responderemos directamente.'},
         {heading:'¿El soporte es remoto o presencial?', text:'Principalmente remoto, lo que reduce costos y agiliza los tiempos de respuesta. Las visitas presenciales pueden coordinarse cuando sea necesario.'},
         {heading:'¿Cuál es su tiempo de respuesta habitual?', text:'Procuramos responder a las nuevas consultas dentro de un día hábil.'},
+        {heading:'¿Qué ocurre con la información que envío?', text:'Cualquier dato que comparta a través de nuestro formulario de Contacto se gestiona conforme a nuestra Política de Privacidad — consulte el enlace de Política de Privacidad en el pie de página para más detalles.'},
       ]},
       datasec:{ title:'Privacidad y Seguridad de Datos', meta:'Cómo protegemos sus datos', intro:'La seguridad es fundamental en nuestros servicios gestionados. Aplicamos controles técnicos y organizativos en capas para proteger los datos del cliente y los datos personales.', sections:[
         {heading:'Cifrado', text:'Los datos se cifran en tránsito (TLS) y en reposo mediante algoritmos estándar del sector en todos los sistemas que gestionamos.'},
@@ -426,9 +430,10 @@ const I18N = {
         {heading:'Weitergabe & Unterauftragsverarbeiter', text:'Wir teilen Daten nur mit geprüften Unterauftragsverarbeitern (z. B. Cloud- und E-Mail-Anbietern) unter Vertraulichkeits- und Datenschutzbedingungen. Wir verkaufen Ihre personenbezogenen Daten nicht.'},
         {heading:'Ihre Rechte', text:'Sie können Zugang, Berichtigung, Löschung oder eine Kopie Ihrer Daten verlangen und sich bei der zuständigen Behörde beschweren. Kontaktieren Sie contact@yoursupportgenie.com, um diese Rechte auszuüben.'},
         {heading:'Aufbewahrung', text:'Wir bewahren personenbezogene Daten nur so lange auf, wie es für die oben genannten Zwecke erforderlich ist oder gesetzlich vorgeschrieben, danach werden sie sicher gelöscht.'},
+        {heading:'Analyse', text:'Wir nutzen Cloudflare Web Analytics, einen datenschutzfreundlichen, cookielosen Dienst, der nur aggregierte Website-Besuche misst — es werden dabei keine personenbezogenen Daten erfasst. Weitere Details finden Sie in unserem Cookie-Hinweis in der Fußzeile.'},
       ]},
       compliance:{ title:'Compliance', meta:'Governance & Standards', intro:'YSG betreibt eine verwaltete IT-Praxis, die an anerkannten Sicherheits- und Service-Management-Rahmenwerken ausgerichtet ist, und erfüllt geltendes indisches Recht.', sections:[
-        {heading:'Regulatorische Compliance', text:'Wir erfüllen den Companies Act, 2013, den Information Technology Act, 2000, und den Digital Personal Data Protection Act, 2023, sowie kundenspezifische regulatorische Anforderungen, sofern vereinbart.'},
+        {heading:'Regulatorische Compliance', text:'Wir erfüllen den Companies Act, 2013, den Information Technology Act, 2000, und den Digital Personal Data Protection Act, 2023, sowie kundenspezifische regulatorische Anforderungen, sofern vereinbart. Für Besucher aus der Europäischen Union richten wir unsere Datenpraktiken zudem an der Datenschutz-Grundverordnung (DSGVO) aus.'},
         {heading:'Sicherheits-Rahmenwerke', text:'Unsere Kontrollen orientieren sich an den Grundsätzen von ISO/IEC 27001 und den SOC-2-Vertrauenskriterien für Sicherheit, Verfügbarkeit und Vertraulichkeit.'},
         {heading:'Branchenausrichtung', text:'Für Kunden in regulierten Branchen unterstützen wir die Einhaltung von Rahmenwerken wie PCI-DSS und HIPAA-äquivalenten Schutzmaßnahmen durch geeignete technische und organisatorische Maßnahmen.'},
         {heading:'Audits & Überprüfungen', text:'Wir führen regelmäßige interne Überprüfungen, Lieferantenbewertungen und Zugriffsprüfungen durch und können Kunden- oder Drittaudits unter NDA unterstützen.'},
@@ -452,6 +457,7 @@ const I18N = {
         {heading:'Wie erhalte ich ein Angebot?', text:'Kontaktieren Sie uns über das Kontaktformular oder per E-Mail an contact@yoursupportgenie.com mit einer kurzen Beschreibung Ihres Bedarfs — wir melden uns direkt bei Ihnen.'},
         {heading:'Ist der Support remote oder vor Ort?', text:'Hauptsächlich remote, was Kosten senkt und Reaktionszeiten beschleunigt. Vor-Ort-Besuche können bei Bedarf vereinbart werden.'},
         {heading:'Wie schnell reagieren Sie üblicherweise?', text:'Wir bemühen uns, neue Anfragen innerhalb eines Werktages zu beantworten.'},
+        {heading:'Was geschieht mit den Angaben, die ich übermittle?', text:'Alle Angaben, die Sie über unser Kontaktformular teilen, werden gemäß unserer Datenschutzerklärung behandelt — Details finden Sie über den Link zur Datenschutzerklärung in der Fußzeile.'},
       ]},
       datasec:{ title:'Datenschutz und Sicherheit', meta:'Wie wir Ihre Daten schützen', intro:'Sicherheit ist zentral für unsere verwalteten Services. Wir wenden mehrschichtige technische und organisatorische Kontrollen an, um Kunden- und personenbezogene Daten zu schützen.', sections:[
         {heading:'Verschlüsselung', text:'Daten werden während der Übertragung (TLS) und im Ruhezustand mit branchenüblichen Algorithmen in allen von uns verwalteten Systemen verschlüsselt.'},
@@ -493,9 +499,10 @@ const I18N = {
         {heading:'Partilha e Subcontratantes', text:'Só partilhamos dados com subcontratantes verificados (por exemplo, fornecedores de cloud e e-mail) sob termos de confidencialidade e proteção de dados. Não vendemos a sua informação pessoal.'},
         {heading:'Os Seus Direitos', text:'Pode solicitar acesso, correção, eliminação ou uma cópia dos seus dados, e pode apresentar uma reclamação junto da autoridade competente. Contacte contact@yoursupportgenie.com para exercer estes direitos.'},
         {heading:'Retenção', text:'Conservamos dados pessoais apenas durante o tempo necessário para os fins acima ou conforme exigido por lei, após o que são eliminados de forma segura.'},
+        {heading:'Análise', text:'Utilizamos o Cloudflare Web Analytics, um serviço de análise sem cookies e respeitador da privacidade que apenas mede visitas agregadas ao site — nenhum dado pessoal é recolhido através dele. Consulte o nosso aviso de Cookies no rodapé para mais detalhes.'},
       ]},
       compliance:{ title:'Conformidade', meta:'Governação e normas', intro:'A YSG opera uma prática de TI gerida alinhada com quadros reconhecidos de segurança e gestão de serviços, e cumpre a legislação indiana aplicável.', sections:[
-        {heading:'Conformidade Regulatória', text:'Cumprimos a Lei das Sociedades de 2013, a Lei das Tecnologias de Informação de 2000, e a Lei de Proteção de Dados Pessoais Digitais de 2023, além das necessidades regulatórias específicas do cliente quando contratadas.'},
+        {heading:'Conformidade Regulatória', text:'Cumprimos a Lei das Sociedades de 2013, a Lei das Tecnologias de Informação de 2000, e a Lei de Proteção de Dados Pessoais Digitais de 2023, além das necessidades regulatórias específicas do cliente quando contratadas. Para visitantes da União Europeia, também alinhamos as nossas práticas de dados com o Regulamento Geral sobre a Proteção de Dados (RGPD).'},
         {heading:'Quadros de Segurança', text:'Os nossos controlos estão alinhados com os princípios da ISO/IEC 27001 e os critérios de confiança SOC 2, abrangendo segurança, disponibilidade e confidencialidade.'},
         {heading:'Alinhamento Setorial', text:'Para clientes em setores regulados, apoiamos a conformidade com quadros como PCI-DSS e salvaguardas equivalentes à HIPAA através de medidas técnicas e organizativas apropriadas.'},
         {heading:'Auditorias e Revisões', text:'Realizamos revisões internas periódicas, avaliações de fornecedores e auditorias de acesso, e podemos apoiar auditorias de clientes ou de terceiros ao abrigo de NDA.'},
@@ -519,6 +526,7 @@ const I18N = {
         {heading:'Como obtenho um orçamento?', text:'Contacte-nos através do formulário de Contacto ou por e-mail para contact@yoursupportgenie.com com uma breve descrição do que precisa — responderemos diretamente.'},
         {heading:'O suporte é remoto ou presencial?', text:'Principalmente remoto, o que reduz custos e acelera os tempos de resposta. Visitas presenciais podem ser organizadas quando necessário.'},
         {heading:'Qual é o vosso tempo de resposta habitual?', text:'Procuramos responder a novos pedidos no prazo de um dia útil.'},
+        {heading:'O que acontece com a informação que submeto?', text:'Quaisquer dados partilhados através do nosso formulário de Contacto são tratados de acordo com a nossa Política de Privacidade — consulte a ligação para a Política de Privacidade no rodapé para mais detalhes.'},
       ]},
       datasec:{ title:'Privacidade e Segurança de Dados', meta:'Como protegemos os seus dados', intro:'A segurança é fundamental nos nossos serviços geridos. Aplicamos controlos técnicos e organizativos em camadas para proteger os dados do cliente e os dados pessoais.', sections:[
         {heading:'Encriptação', text:'Os dados são encriptados em trânsito (TLS) e em repouso, utilizando algoritmos padrão da indústria em todos os sistemas que gerimos.'},
